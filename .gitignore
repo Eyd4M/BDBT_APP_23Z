@@ -11,13 +11,11 @@
 .mtj.tmp/
 
 # Intellij
-.idea/
 *.iml
 *.iws
 
 # Maven
 log/
-target/
 
 # Package Files #
 *.jar

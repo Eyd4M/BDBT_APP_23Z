@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="36eacebe-aa11-4c82-a8c6-252c1a077c94" name="Changes" comment="Changed path for ojdb10.jar dependency.">
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/admin/main_admin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/errors/403.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/errors/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/errors/500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/errors/504.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/errors/other.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/user/main_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2aBAkdndciIqh16yXTr3IIXWWYW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/EydaM/Desktop/asd&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.6103448&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;4c0a5dbe91517da50b195c209d2c89ca&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\EydaM\Desktop\BDBT_APP_23Z\src\main\resources" />
+      <recent name="C:\Users\EydaM\Desktop\BDBT_APP_23Z" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="BDBT_APP_23Z" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="bdbt_bada_project.SpringApplication.Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bdbt_bada_project.SpringApplication.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36eacebe-aa11-4c82-a8c6-252c1a077c94" name="Changes" comment="" />
+      <created>1703781742355</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703781742355</updated>
+      <workItem from="1703781743458" duration="1182000" />
+      <workItem from="1703864222924" duration="1436000" />
+      <workItem from="1704304099007" duration="4257000" />
+      <workItem from="1704309257231" duration="143000" />
+      <workItem from="1704309724685" duration="73000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added basic files with security config, bootstrap and simple views.">
+      <created>1703782429505</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703782429505</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Changed path for ojdb10.jar dependency. Put jar in repo">
+      <created>1704304716804</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704304716804</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Changed path for ojdb10.jar dependency. Chaned database connection">
+      <created>1704307079334</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704307079334</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Changed path for ojdb10.jar dependency.">
+      <created>1704309292975</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704309292975</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added basic files with security config, bootstrap and simple views." />
+    <MESSAGE value="Changed path for ojdb10.jar dependency. Put jar in repo" />
+    <MESSAGE value="Changed path for ojdb10.jar dependency. Chaned database connection" />
+    <MESSAGE value="Changed path for ojdb10.jar dependency." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed path for ojdb10.jar dependency." />
+  </component>
+</project>
