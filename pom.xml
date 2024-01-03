@@ -56,7 +56,7 @@
 			<artifactId>ojdbc10</artifactId>
 			<version>1.0</version>
 			<scope>system</scope>
-			<systemPath>user.dir + "src/main/resources/ojdbc10.jar"</systemPath>
+			<systemPath>src/main/resources/ojdbc10.jar</systemPath>
 		</dependency>
 
 		<!-- Spring Security - start -->
