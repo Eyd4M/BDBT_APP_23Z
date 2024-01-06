@@ -1,0 +1,13 @@
+.gradient-bg {
+            background: rgb(36,0,36);
+            background: linear-gradient(45deg, rgba(108,128,240,0.94) 0%, rgba(105,168,240,0.94) 29%, rgba(216,108,240,1) 100%);
+        }
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
