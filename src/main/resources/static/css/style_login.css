@@ -11,3 +11,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.bg-navbar {
+    background-color: #826CF0;
+}
