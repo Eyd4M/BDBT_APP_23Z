@@ -4,10 +4,10 @@
     <meta charset="UTF-8"/>
     <title>Welcome Page</title>
     <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
-    <link th:rel="stylesheet" th:href="@{css/style.css}"/>
+    <link th:rel="stylesheet" th:href="@{css/style_index.css}"/>
 
 </head>
-
+<body>
 <!-- <body th:style="'background: url(/assets/img/test_main.png) no-repeat center center fixed;'"> -->
 
 
@@ -20,7 +20,7 @@
 
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-navbar static-top">
     <div class="container">
         <a class="navbar-brand" href="/">Schronisko Pupil</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -54,15 +54,12 @@
 <!--Using images in page    -->
 <!-- <img th:src="@{/assets/img/test_main.png}" alt="Image" class="img-fluid"> -->
 
+<div class="container no-padding">
+    <img class="logo img-fluid" th:src="@{/img/Pupil_logo.png}" alt="First slide" >
+</div>
 
-
-<div class="container-fluid">
+<div class="container-fluid no-padding">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
         <div class="carousel-inner">
             <div class="carousel-item active carousel-fit">
                 <img class="d-block img-fluid" th:src="@{/img/carousel-1.png}" alt="First slide" >
