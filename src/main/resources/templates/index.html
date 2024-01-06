@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Welcome Page</title>
-
     <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+    <link th:rel="stylesheet" th:href="@{css/style.css}"/>
 
 </head>
 
-<!-- <body th:style="'background: url(/assets/img/img.png) no-repeat center center fixed;'"> -->
+<!-- <body th:style="'background: url(/assets/img/test_main.png) no-repeat center center fixed;'"> -->
 
 
 <!--<style th:inline="text">-->
 <!--    body{-->
-<!--        background: url([[@{/assets/img/img.png}]])-->
+<!--        background: url([[@{/assets/img/test_main.png}]])-->
 <!--        no-repeat center center fixed;-->
 <!--    }-->
 <!--</style>-->
 
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top">
     <div class="container">
-        <a class="navbar-brand" href="/">BDBT Spring Boot Project - Part II</a>
+        <a class="navbar-brand" href="/">Schronisko Pupil</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -52,15 +52,44 @@
 
 
 <!--Using images in page    -->
-<!-- <img th:src="@{/assets/img/img.png}" alt="Image" class="img-fluid"> -->
+<!-- <img th:src="@{/assets/img/test_main.png}" alt="Image" class="img-fluid"> -->
 
+
+
+<div class="container-fluid">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active carousel-fit">
+                <img class="d-block img-fluid" th:src="@{/img/carousel-1.png}" alt="First slide" >
+            </div>
+            <div class="carousel-item carousel-fit">
+                <img class="d-block img-fluid" th:src="@{/img/carousel-2.png}" alt="Second slide">
+            </div>
+            <div class="carousel-item carousel-fit">
+                <img class="d-block img-fluid" th:src="@{/img/carousel-3.png}" alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
 
 <div class="container">
     <div class="row">
-        <div class="col-md-10 mt-5">
-
+        <div class="col-md-12 mt-5">
             <label style="font-size:30px">Welcome to the home page!</label>
-            <div style="font-size:20px">If you want to login, click <a th:href="@{/main}"><b>here</b></a> or in the
+            <div style="font-size:20px">If you want to log in, click <a th:href="@{/main}"><b>here</b></a> or in the
                 upper right corner.
             </div>
 
