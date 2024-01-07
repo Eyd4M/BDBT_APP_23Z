@@ -1,6 +1,7 @@
 .carousel-fit {
     width: 100%;
-    height: 60vh;
+    height: 50vh;
+    top: -10vh;
 }
 .no-padding {
     padding-left: 0;
@@ -26,5 +27,13 @@
 @media screen and (max-width: 992px) {
     #text-navbar {
         display: none;
+    }
+    .carousel-fit{
+        top: -5vh;
+    }
+}
+@media screen and (max-width: 768px) {
+    .carousel-fit{
+        top: 0vh;
     }
 }
