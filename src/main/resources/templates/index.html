@@ -23,7 +23,11 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-navbar static-top drop-shadow fwd-navbar">
     <div class="container">
-        <a class="navbar-brand" href="/">Schronisko Pupil</a>
+        <a class="navbar-brand mb-0 h1" href="/"><img th:src="@{/img/logo_icon.png}" width="30" height="30" class="d-inline-block align-top" alt="logo-navbar" style="margin-right: 0.5rem;">
+        Schronisko Pupil</a>
+        <div id="text-navbar" class="container-fluid" style="text-align: center;">
+            <span class="text-white">Codziennie pomagamy <b>tysiącom</b> zwierząt w całej Polsce</span>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +60,7 @@
 <!-- <img th:src="@{/assets/img/test_main.png}" alt="Image" class="img-fluid"> -->
 
 <div class="container no-padding">
-    <img class="logo img-fluid" th:src="@{/img/Pupil_logo.png}" alt="First slide" >
+    <a th:href="@{/}"></a><img class="logo img-fluid" th:src="@{/img/Pupil_logo.png}" alt="Pupil_logo" ></a>
 </div>
 
 <div class="container-fluid no-padding">
