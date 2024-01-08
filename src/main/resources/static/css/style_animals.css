@@ -1,0 +1,9 @@
+.logo {
+    position: absolute;
+    z-index: 1000;
+    width: 20%;
+    height: auto;
+    left: -2%;
+    padding-top: -5%;
+
+}

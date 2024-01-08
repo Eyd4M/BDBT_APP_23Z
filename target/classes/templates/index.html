@@ -15,39 +15,42 @@
 <!--<style th:inline="text">-->
 <!--    body{-->
 <!--        background: url([[@{/assets/img/test_main.png}]])-->
-<!--        no-repeat center center fixed;-->
+<!--        no-repeat center fixed;-->
 <!--    }-->
 <!--</style>-->
 
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-navbar static-top drop-shadow fwd-navbar">
-    <div class="container">
+    <div class="container-fluid ml-0">
         <a class="navbar-brand mb-0 h1" href="/"><img th:src="@{/img/logo_icon.png}" width="30" height="30" class="d-inline-block align-top" alt="logo-navbar" style="margin-right: 0.5rem;">
         Schronisko Pupil</a>
-        <div id="text-navbar" class="container-fluid" style="text-align: center;">
-            <span class="text-white">Codziennie pomagamy <b>tysiącom</b> zwierząt w całej Polsce</span>
-        </div>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive"
                 aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="container-fluid collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home
+                    <a class="nav-link" href="#">Strona Główna
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/main}">Main</a>
+                    <a class="nav-link" th:href="@{/animals}">Zwierzaki do adopcji</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/main}">Login</a></a>
+                    <a class="nav-link" th:href="@{/main}">Panel</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/main}">Zaloguj się</a></a>
                 </li>
 
             </ul>
@@ -60,7 +63,7 @@
 <!-- <img th:src="@{/assets/img/test_main.png}" alt="Image" class="img-fluid"> -->
 
 <div class="container no-padding">
-    <a th:href="@{/}"></a><img class="logo img-fluid" th:src="@{/img/Pupil_logo.png}" alt="Pupil_logo" ></a>
+    <img class="logo img-fluid" th:src="@{/img/Pupil_logo.png}" alt="Pupil_logo" >
 </div>
 
 <div class="container-fluid no-padding">
@@ -87,17 +90,17 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container-fluid mid">
     <div class="row">
-        <div class="col-md-12 mt-5">
-            <label style="font-size:30px">Welcome to the home page!</label>
-            <div style="font-size:20px">If you want to log in, click <a th:href="@{/main}"><b>here</b></a> or in the
-                upper right corner.
+        <div class="col-md-12 mt-5 text-center">
+            <div class="container">
+                <a th:href="@{/animals}"><button class="btn btn-primary text-white" type="submit">ZNAJDŹ ZWIERZAKA DO ADOPCJI JUŻ TERAZ!</button></a>
             </div>
-
+            <div style="font-size:20px">Jeśli chcesz złożyć prośbę o adopcję, najpierw zaloguj się <a th:href="@{/main}"><b>tutaj</b></a> lub w prawym górnym rogu.
         </div>
     </div>
 </div>
+
 
 <!--<div align="center">
     <h1>Sales Records</h1>
@@ -127,7 +130,13 @@
     </table>
 
 </div>-->
-
+<footer class="bg-body-tertiary text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3 text-white fixed-bottom" style="background-color: #826CF0;">
+        © 2024 Copyright: Adam Dołowy, Piotr Kosiara
+    </div>
+    <!-- Copyright -->
+</footer>
 
 <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
 <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
