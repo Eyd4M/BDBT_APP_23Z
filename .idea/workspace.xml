@@ -4,23 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36eacebe-aa11-4c82-a8c6-252c1a077c94" name="Changes" comment="Changed path for ojdb10.jar dependency.">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/gradient_style.css" afterDir="false" />
+    <list default="true" id="36eacebe-aa11-4c82-a8c6-252c1a077c94" name="Changes" comment="Added animals page. Added a few elements on the main page and changed navbar layout.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ojdbc10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/main_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/main_admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ojdbc10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/main_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/main_admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bdbt_bada_project/SpringApplication/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bdbt_bada_project/SpringApplication/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style_animals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style_animals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/animals.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/animals.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bdbt_bada_project/SpringApplication/AppController$DashboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bdbt_bada_project/SpringApplication/AppController$DashboardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bdbt_bada_project/SpringApplication/AppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bdbt_bada_project/SpringApplication/AppController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -33,29 +40,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/EydaM/Desktop/test&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.6103448&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;4c0a5dbe91517da50b195c209d2c89ca&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "java.lang.Object",
+    "last_opened_file_path": "C:/Users/EydaM/Desktop/test",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.6103448",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "spring.configuration.checksum": "4c0a5dbe91517da50b195c209d2c89ca",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="bdbt_bada_project.SpringApplication" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\EydaM\Desktop\BDBT_APP_23Z\src\main\resources" />
       <recent name="C:\Users\EydaM\Desktop\BDBT_APP_23Z" />
@@ -63,17 +78,72 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\EydaM\Desktop\BDBT_APP_23Z\src\main\resources\static" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="java.lang.Object" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="bdbt_bada_project.SpringApplication" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="19" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="bdbt_bada_project.SpringApplication.Application" />
-      <module name="SpringApplication" />
+      <module name="BDBT_APP_23Z" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="bdbt_bada_project.SpringApplication.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SalesDAOTest.testList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BDBT_APP_23Z" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bdbt_bada_project.SpringApplication.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bdbt_bada_project.SpringApplication" />
+      <option name="MAIN_CLASS_NAME" value="bdbt_bada_project.SpringApplication.SalesDAOTest" />
+      <option name="METHOD_NAME" value="testList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZwierzetaDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BDBT_APP_23Z" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bdbt_bada_project.SpringApplication.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bdbt_bada_project.SpringApplication" />
+      <option name="MAIN_CLASS_NAME" value="bdbt_bada_project.SpringApplication.ZwierzetaDAOTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZwierzetaDAOTest.testList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BDBT_APP_23Z" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bdbt_bada_project.SpringApplication.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bdbt_bada_project.SpringApplication" />
+      <option name="MAIN_CLASS_NAME" value="bdbt_bada_project.SpringApplication.ZwierzetaDAOTest" />
+      <option name="METHOD_NAME" value="testList" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -93,6 +163,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="JUnit.ZwierzetaDAOTest" />
+        <item itemvalue="JUnit.ZwierzetaDAOTest.testList" />
+        <item itemvalue="JUnit.SalesDAOTest.testList" />
         <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
@@ -112,6 +186,11 @@
       <workItem from="1704309724685" duration="476000" />
       <workItem from="1704310627972" duration="156000" />
       <workItem from="1704561175913" duration="5894000" />
+      <workItem from="1704636993124" duration="6604000" />
+      <workItem from="1704655715807" duration="609000" />
+      <workItem from="1704747981735" duration="6860000" />
+      <workItem from="1705234902341" duration="8001000" />
+      <workItem from="1705342661732" duration="6119000" />
     </task>
     <task id="LOCAL-00001" summary="Added basic files with security config, bootstrap and simple views.">
       <created>1703782429505</created>
@@ -162,7 +241,63 @@
       <option name="project" value="LOCAL" />
       <updated>1704310668657</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added some styles to index, changed name of styles file for login page">
+      <created>1704571020754</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704571020754</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added image and Logo">
+      <created>1704571050447</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1704571050447</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Corrected database ip and port">
+      <created>1704639605165</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1704639605165</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added Icons to all pages">
+      <created>1704639627320</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1704639627320</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added shadow classes in css and applied to login and index pages">
+      <created>1704639648086</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1704639648086</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added text and logo icon on navbar. Added media in style to remove text on smaller screens">
+      <created>1704643028729</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1704643028729</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added more responsiveness to carousel images and cropped them a bit more.">
+      <created>1704643618254</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1704643618254</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added animals page. Added a few elements on the main page and changed navbar layout.">
+      <created>1704754896433</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1704754896433</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +309,14 @@
     <MESSAGE value="Changed path for ojdb10.jar dependency. Chaned database connection" />
     <MESSAGE value="Changed path for ojdb10.jar dependency." />
     <MESSAGE value="Changed stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed stuff" />
+    <MESSAGE value="Added some styles to index, changed name of styles file for login page" />
+    <MESSAGE value="Added image and Logo" />
+    <MESSAGE value="Corrected database ip and port" />
+    <MESSAGE value="Added Icons to all pages" />
+    <MESSAGE value="Added shadow classes in css and applied to login and index pages" />
+    <MESSAGE value="Added text and logo icon on navbar. Added media in style to remove text on smaller screens" />
+    <MESSAGE value="Added more responsiveness to carousel images and cropped them a bit more." />
+    <MESSAGE value="Added animals page. Added a few elements on the main page and changed navbar layout." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added animals page. Added a few elements on the main page and changed navbar layout." />
   </component>
 </project>

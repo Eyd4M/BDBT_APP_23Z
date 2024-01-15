@@ -56,6 +56,30 @@
 <div class="container no-padding">
   <img class="logo img-fluid" th:src="@{/img/Pupil_logo.png}" alt="Pupil_logo" >
 </div>
+<div class="container-fluid">
+  <table border = "1" cellpadding = "10" class="table-center">
+    <!-- Table header -->
+    <thead>
+    <tr> <!-- Table row -->
+      <th>Nr_zwierzecia</th> <!-- Table column -->
+      <th>Imie</th>
+      <th>Opis</th>
+      <th>Plec</th>
+      <th>Stan zdrowia</th>
+    </tr>
+    </thead>
+    <!-- Table body -->
+    <tbody>
+    <tr th:each = "zwierze : ${listZwierze}">
+      <td th:text = "${zwierze.nr_zwierzecia}">Nr_zwierzecia</td>
+      <td th:text = "${zwierze.imie}">Imie</td>
+      <td th:text = "${zwierze.opis}">Opis</td>
+      <td th:text = "${zwierze.plec}">Plec</td>
+      <td th:text = "${zwierze.stan_zdrowia}">Stan zdrowia</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
 
 
 
