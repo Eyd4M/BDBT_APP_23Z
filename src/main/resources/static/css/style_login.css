@@ -22,3 +22,38 @@ body {
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.35);
     z-index:50;
 }
+.logo {
+    position: absolute;
+    z-index: 1000;
+    width: 380px;
+    height: auto;
+    left: -2%;
+    padding-top: -5%;
+
+}
+.btn-primary{
+    background-color: #826CF0;
+    font-size: 1rem;
+    border-color: #826CF0;
+}
+.btn-primary:hover{
+    background-color: #31186c;
+    border-color: #31186c;
+}
+
+
+@media screen and (max-width: 992px) {
+    .logo {
+        display: none;
+    }
+    .login-form-ratio {
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        display: none;
+    }
+}

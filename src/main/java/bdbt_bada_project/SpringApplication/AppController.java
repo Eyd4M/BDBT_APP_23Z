@@ -1,6 +1,5 @@
 package bdbt_bada_project.SpringApplication;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,12 +15,20 @@ public class AppController implements WebMvcConfigurer {
     @Autowired
     private ZwierzetaDAO dao;
 
-    @RequestMapping("/animals")
-    public String viewAnimalsPage(Model model) {
+    @RequestMapping("/animals_user")
+    public String viewAnimalsUserPage(Model model) {
         /* IMport java.util.List */
         List<Zwierze> listZwierze = dao.list();
         model.addAttribute("listZwierze", listZwierze);
-        return "animals";
+        return "user/animals_user";
+    }
+
+    @RequestMapping("/animals_admin")
+    public String viewAnimalsAdminPage(Model model) {
+        /* IMport java.util.List */
+        List<Zwierze> listZwierze = dao.list();
+        model.addAttribute("listZwierze", listZwierze);
+        return "admin/animals_admin";
     }
 
 
@@ -34,16 +41,45 @@ public class AppController implements WebMvcConfigurer {
         registry.addViewController("/login").setViewName("login");
         registry.addViewController("/animals").setViewName("animals");
 
-        registry.addViewController("/main_admin").setViewName("admin/main_admin");
+
+        registry.addViewController("/animals_user").setViewName("user/animals_user");
+        registry.addViewController("/animals_admin").setViewName("admin/animals_admin");
         registry.addViewController("/main_user").setViewName("user/main_user");
+        registry.addViewController("/main_admin").setViewName("admin/main_admin");
+    }
+
+    @Controller
+    public class AnimalsController
+    {
+        @RequestMapping
+                ("/animals")
+        public String defaultAfterLogin
+                (Model model, HttpServletRequest request) {
+            /* IMport java.util.List */
+            List<Zwierze> listZwierze = dao.list();
+            model.addAttribute("listZwierze", listZwierze);
+            if
+            (request.isUserInRole
+                    ("ADMIN")) {
+                return "redirect:/animals_admin";
+            }
+            else if
+            (request.isUserInRole
+                            ("USER")) {
+                return "redirect:/animals_user";
+            }
+            else
+            {
+                return "/animals";
+            }
+        }
     }
 
     @Controller
     public class DashboardController
     {
         @RequestMapping
-                ("/main"
-                )
+                ("/main")
         public String defaultAfterLogin
                 (HttpServletRequest request) {
             if
@@ -63,6 +99,33 @@ public class AppController implements WebMvcConfigurer {
         }
     }
 
+    @Controller
+    public class LoginPageController
+    {
+        @RequestMapping
+                ("/login")
+        public String defaultAfterLogin
+                (HttpServletRequest request) {
+            if
+            (request.isUserInRole
+                    ("ADMIN")) {
+                return "redirect:/main_admin";
+            }
+            else if
+            (request.isUserInRole
+                            ("USER")) {
+                return "redirect:/main_user";
+            }
+            else
+            {
+                return "/login";
+            }
+        }
+    }
+
+
+
+
     @RequestMapping(value={"/main_admin"})
     public String showAdminPage(Model model) {
         return "admin/main_admin";
@@ -71,4 +134,5 @@ public class AppController implements WebMvcConfigurer {
     public String showUserPage(Model model) {
         return "user/main_user";
     }
+
 }
