@@ -46,6 +46,8 @@ public class AppController implements WebMvcConfigurer {
         registry.addViewController("/animals_admin").setViewName("admin/animals_admin");
         registry.addViewController("/main_user").setViewName("user/main_user");
         registry.addViewController("/main_admin").setViewName("admin/main_admin");
+        registry.addViewController("/index_admin").setViewName("admin/index_admin");
+        registry.addViewController("/index_user").setViewName("user/index_user");
     }
 
     @Controller
@@ -119,6 +121,30 @@ public class AppController implements WebMvcConfigurer {
             else
             {
                 return "/login";
+            }
+        }
+    }
+
+    @Controller
+    public class IndexController
+    {
+        @RequestMapping
+                ("/index")
+        public String defaultAfterLogin
+                (HttpServletRequest request) {
+            if
+            (request.isUserInRole
+                    ("ADMIN")) {
+                return "redirect:/index_admin";
+            }
+            else if
+            (request.isUserInRole
+                            ("USER")) {
+                return "redirect:/index_user";
+            }
+            else
+            {
+                return "/index";
             }
         }
     }
