@@ -30,10 +30,7 @@
                     <td><input type="text" th:field="*{zwierze.opis}"></td>
                 </tr>
                 <!-- Third row -->
-                <tr>
-                    <td>Data urodzenia:</td>
-                    <td><input type="date" th:field="*{zwierze.data_urodzenia}"></td>
-                </tr>
+
                 <!-- Fourth row -->
                 <tr>
                     <td>Plec:</td>
@@ -52,6 +49,10 @@
                         <input type="radio" id="chory" name="stan_zdrowia" value="chory" th:field="*{zwierze.stan_zdrowia}">
                         <label for="chory">K</label><br>
                     </td>
+                </tr>
+                <tr>
+                    <td>Data urodzenia:</td>
+                    <td><input type="date" th:field="*{zwierze.data_urodzenia}"></td>
                 </tr>
                 <tr>
                     <td>Numer klatki:</td>

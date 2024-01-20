@@ -2,7 +2,9 @@ package bdbt_bada_project.SpringApplication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -14,6 +16,9 @@ public class AppController implements WebMvcConfigurer {
 
     @Autowired
     private ZwierzetaDAO dao;
+    @Autowired
+    private PracownicyDAO pracownicyDAO;
+
 
     @RequestMapping("/animals_user")
     public String viewAnimalsUserPage(Model model) {
@@ -31,12 +36,26 @@ public class AppController implements WebMvcConfigurer {
         return "admin/animals_admin";
     }
 
+    @RequestMapping(value={"/main_admin"})
+    public String showAdminPage(Model model) {
+        /* Import java.util.List */
+        List<Pracownik> listPracownik = pracownicyDAO.list();
+        model.addAttribute("listPracownik", listPracownik);
+        return "admin/main_admin";
+    }
+
     @RequestMapping("/new")
     public String showNewForm(Model model) {
         Zwierze zwierze = new Zwierze();
         model.addAttribute("zwierze", zwierze);
 
         return "new_form";
+    }
+
+    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    public String save(@ModelAttribute("zwierze") Zwierze zwierze) {
+        dao.save(zwierze);
+        return "redirect:/";
     }
 
 
@@ -158,13 +177,6 @@ public class AppController implements WebMvcConfigurer {
         }
     }
 
-
-
-
-    @RequestMapping(value={"/main_admin"})
-    public String showAdminPage(Model model) {
-        return "admin/main_admin";
-    }
     @RequestMapping(value={"/main_user"})
     public String showUserPage(Model model) {
         return "user/main_user";
