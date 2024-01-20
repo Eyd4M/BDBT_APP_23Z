@@ -63,7 +63,6 @@
     <!-- Table header -->
     <thead>
     <tr> <!-- Table row -->
-      <th>Nr_zwierzecia</th> <!-- Table column -->
       <th>Imie</th>
       <th>Opis</th>
       <th>Plec</th>
@@ -73,7 +72,6 @@
     <!-- Table body -->
     <tbody>
     <tr th:each = "zwierze : ${listZwierze}">
-      <td th:text = "${zwierze.nr_zwierzecia}">Nr_zwierzecia</td>
       <td th:text = "${zwierze.imie}">Imie</td>
       <td th:text = "${zwierze.opis}">Opis</td>
       <td th:text = "${zwierze.plec}">Plec</td>

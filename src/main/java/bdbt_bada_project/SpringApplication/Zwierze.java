@@ -3,7 +3,6 @@ package bdbt_bada_project.SpringApplication;
 import java.util.Date;
 
 public class Zwierze {
-    private int nr_zwierzecia;
     private String imie;
     private String opis;
     private String plec;
@@ -19,8 +18,8 @@ public class Zwierze {
         super();
     }
 
-    public Zwierze(int nr_zwierzecia, String imie, String opis, String plec, String stan_zdrowia, Date data_urodzenia, int nr_schroniska, int nr_klatki, Integer nr_klienta_oddajacy, Integer nr_klienta_adoptujacy, int nr_rasy) {
-        this.nr_zwierzecia = nr_zwierzecia;
+    public Zwierze(String imie, String opis, String plec, String stan_zdrowia, Date data_urodzenia, int nr_schroniska, int nr_klatki, Integer nr_klienta_oddajacy, Integer nr_klienta_adoptujacy, int nr_rasy) {
+//        this.nr_zwierzecia = nr_zwierzecia;
         this.imie = imie;
         this.opis = opis;
         this.plec = plec;
@@ -34,9 +33,6 @@ public class Zwierze {
     }
 
     //Getters
-    public int getNr_zwierzecia() {
-        return nr_zwierzecia;
-    }
 
     public String getImie() {
         return imie;
@@ -79,9 +75,6 @@ public class Zwierze {
 
     //Setters
 
-    public void setNr_zwierzecia(int nr_zwierzecia) {
-        this.nr_zwierzecia = nr_zwierzecia;
-    }
 
     public void setImie(String imie) {
         this.imie = imie;
@@ -129,7 +122,6 @@ public class Zwierze {
     @Override
     public String toString() {
         return "Zwierze{" +
-                "nr_zwierzecia=" + nr_zwierzecia +
                 ", imie='" + imie + '\'' +
                 ", opis='" + opis + '\'' +
                 ", plec='" + plec + '\'' +

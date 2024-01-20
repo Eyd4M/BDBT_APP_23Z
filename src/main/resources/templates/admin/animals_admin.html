@@ -63,12 +63,23 @@
 <div class="container no-padding">
     <img class="logo img-fluid" th:src="@{/img/Pupil_logo.png}" alt="Pupil_logo" >
 </div>
+
+
+ <div class="container-fluid">
+     <div class="row" style="align-content: center; justify-content: center">
+         <!-- Entry to new page -->
+         <a class="button-new" th:href="@{/new}">Enter new sale</a>
+     </div>
+
+ </div>
+
+
 <div class="container-fluid">
     <table border = "1" cellpadding = "10" class="table-center">
         <!-- Table header -->
         <thead>
         <tr> <!-- Table row -->
-            <th>Nr_zwierzecia</th> <!-- Table column -->
+<!--            <th>Nr_zwierzecia</th> &lt;!&ndash; Table column &ndash;&gt;-->
             <th>Imie</th>
             <th>Opis</th>
             <th>Plec</th>
@@ -78,7 +89,7 @@
         <!-- Table body -->
         <tbody>
         <tr th:each = "zwierze : ${listZwierze}">
-            <td th:text = "${zwierze.nr_zwierzecia}">Nr_zwierzecia</td>
+<!--            <td th:text = "${zwierze.nr_zwierzecia}">Nr_zwierzecia</td>-->
             <td th:text = "${zwierze.imie}">Imie</td>
             <td th:text = "${zwierze.opis}">Opis</td>
             <td th:text = "${zwierze.plec}">Plec</td>

@@ -31,6 +31,14 @@ public class AppController implements WebMvcConfigurer {
         return "admin/animals_admin";
     }
 
+    @RequestMapping("/new")
+    public String showNewForm(Model model) {
+        Zwierze zwierze = new Zwierze();
+        model.addAttribute("zwierze", zwierze);
+
+        return "new_form";
+    }
+
 
 
 
@@ -40,6 +48,7 @@ public class AppController implements WebMvcConfigurer {
         registry.addViewController("/main").setViewName("main");
         registry.addViewController("/login").setViewName("login");
         registry.addViewController("/animals").setViewName("animals");
+        registry.addViewController("/new").setViewName("new_form");
 
 
         registry.addViewController("/animals_user").setViewName("user/animals_user");

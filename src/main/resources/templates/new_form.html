@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Schronisko Pupil</title>
+    <link rel="icon" type="image/x-icon" th:href="@{/img/logo_icon.png}">
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+
+
+</head>
+<body>
+    <div align="center">
+        <!-- Page header -->
+        <h1>Dodaj nowe zwierze</h1>
+
+        <!-- End line/ new line -->
+        <br/>
+        <!--Imie, Opis, Data_urodzenia, Plec, Stan_zdrowia, Nr_schroniska, Nr_klatki, Nr_klienta_oddajacy, Nr_klienta_adoptujacy, Nr_rasy-->
+        <form action="#" th:action="@{/save}" th:objects="${zwierze}" method="post">
+            <!-- table -->
+            <table border = "1" cellpadding = "10">
+                <!-- Table row -->
+                <tr>
+                    <td>Imię:</td>
+                    <td><input type="text" th:field="*{zwierze.imie}" name="imie"></td>
+                </tr>
+                <!-- Second row -->
+                <tr>
+                    <td>Opis:</td>
+                    <td><input type="text" th:field="*{zwierze.opis}"></td>
+                </tr>
+                <!-- Third row -->
+                <tr>
+                    <td>Data urodzenia:</td>
+                    <td><input type="date" th:field="*{zwierze.data_urodzenia}"></td>
+                </tr>
+                <!-- Fourth row -->
+                <tr>
+                    <td>Plec:</td>
+                    <td>
+                        <input type="radio" id="plecM" name="plec" value="M" th:field="*{zwierze.plec}">
+                        <label for="plecM">M</label><br>
+                        <input type="radio" id="plecK" name="plec" value="K" th:field="*{zwierze.plec}">
+                        <label for="plecK">K</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Stan zdrowia:</td>
+                    <td>
+                        <input type="radio" id="zdrowy" name="stan_zdrowia" value="zdrowy" th:field="*{zwierze.stan_zdrowia}">
+                        <label for="zdrowy">M</label><br>
+                        <input type="radio" id="chory" name="stan_zdrowia" value="chory" th:field="*{zwierze.stan_zdrowia}">
+                        <label for="chory">K</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Numer klatki:</td>
+                    <td><input type="number" th:field="*{zwierze.nr_klatki}"></td>
+                </tr>
+                <tr>
+                    <td>Numer klienta oddającego (Opcjonalne):</td>
+                    <td><input type="number" th:field="*{zwierze.nr_klienta_oddajacy}"></td>
+                </tr>
+                <tr>
+                    <td>Nr rasy:</td>
+                    <td><input type="number" th:field="*{zwierze.nr_rasy}"></td>
+                </tr>
+
+                <!-- Button save -->
+                <tr>
+                    <td colspan="2"><button type="submit">Zapisz</button></td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+</body>
+</html>
