@@ -10,8 +10,8 @@ public class Pracownik {
     private String plec;
     private Integer pesel;
     private int nr_telefonu;
-    private Date data_zatrudnienia;
-    private Date data_zwolnienia;
+    private String data_zatrudnienia;
+    private String data_zwolnienia;
     private Integer nr_konta;
     private int nr_schroniska;
     private int nr_adresu;
@@ -20,7 +20,7 @@ public class Pracownik {
         super();
     }
 
-    public Pracownik(int nr_pracownika, String imie, String nazwisko, String plec, Integer pesel, Date data_zatrudnienia, int nr_schroniska, Date data_zwolnienia,int nr_telefonu,Integer nr_konta, int nr_adresu) {
+    public Pracownik(int nr_pracownika, String imie, String nazwisko, String plec, Integer pesel, String data_zatrudnienia, int nr_schroniska, String data_zwolnienia,int nr_telefonu,Integer nr_konta, int nr_adresu) {
         this.nr_pracownika = nr_pracownika;
         this.imie = imie;
         this.nazwisko = nazwisko;
@@ -59,11 +59,11 @@ public class Pracownik {
         return nr_telefonu;
     }
 
-    public Date getData_zatrudnienia() {
+    public String getData_zatrudnienia() {
         return data_zatrudnienia;
     }
 
-    public Date getData_zwolnienia() {
+    public String getData_zwolnienia() {
         return data_zwolnienia;
     }
 
@@ -109,11 +109,11 @@ public class Pracownik {
         this.nr_telefonu = nr_telefonu;
     }
 
-    public void setData_zatrudnienia(Date data_zatrudnienia) {
+    public void setData_zatrudnienia(String data_zatrudnienia) {
         this.data_zatrudnienia = data_zatrudnienia;
     }
 
-    public void setData_zwolnienia(Date data_zwolnienia) {
+    public void setData_zwolnienia(String data_zwolnienia) {
         this.data_zwolnienia = data_zwolnienia;
     }
 

@@ -44,15 +44,15 @@
                 <tr>
                     <td>Stan zdrowia:</td>
                     <td>
-                        <input type="radio" id="zdrowy" name="stan_zdrowia" value="zdrowy" th:field="*{zwierze.stan_zdrowia}">
-                        <label for="zdrowy">M</label><br>
-                        <input type="radio" id="chory" name="stan_zdrowia" value="chory" th:field="*{zwierze.stan_zdrowia}">
-                        <label for="chory">K</label><br>
+                        <input type="radio" id="zdrowy" name="stan_zdrowia" value="Zdrowy" th:field="*{zwierze.stan_zdrowia}">
+                        <label for="zdrowy">Zdrowy</label><br>
+                        <input type="radio" id="chory" name="stan_zdrowia" value="Chory" th:field="*{zwierze.stan_zdrowia}">
+                        <label for="chory">Chory</label><br>
                     </td>
                 </tr>
                 <tr>
                     <td>Data urodzenia:</td>
-                    <td><input type="date" th:field="*{zwierze.data_urodzenia}"></td>
+                    <td><input type="date"  min="1999-01-01" th:field="*{zwierze.data_urodzenia}"></td>
                 </tr>
                 <tr>
                     <td>Numer klatki:</td>
@@ -69,11 +69,17 @@
 
                 <!-- Button save -->
                 <tr>
-                    <td colspan="2"><button type="submit">Zapisz</button></td>
+                    <td colspan="2"><button type="submit" onclick="successfullyAdd()">Zapisz</button></td>
                 </tr>
             </table>
         </form>
 
     </div>
+
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/script.js}"></script>
+
 </body>
 </html>

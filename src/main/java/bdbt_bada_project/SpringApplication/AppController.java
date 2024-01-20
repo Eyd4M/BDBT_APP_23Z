@@ -18,8 +18,8 @@ public class AppController implements WebMvcConfigurer {
     private ZwierzetaDAO dao;
     @Autowired
     private PracownicyDAO pracownicyDAO;
-    @Autowired
-    private KlienciDAO kliencidao;
+//    @Autowired
+//    private KlienciDAO klienciDao;
 
 
     @RequestMapping("/animals_user")
@@ -57,7 +57,7 @@ public class AppController implements WebMvcConfigurer {
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save(@ModelAttribute("zwierze") Zwierze zwierze) {
         dao.save(zwierze);
-        return "redirect:/";
+        return "redirect:/animals";
     }
 
 

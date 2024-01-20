@@ -7,8 +7,8 @@ public class Zwierze {
     private String opis;
     private String plec;
     private String stan_zdrowia;
-    private Date data_urodzenia;
-    private int nr_schroniska;
+    private String data_urodzenia;
+    private int nr_schroniska = 1;
     private int nr_klatki;
     private Integer nr_klienta_oddajacy;
     private Integer nr_klienta_adoptujacy;
@@ -18,7 +18,7 @@ public class Zwierze {
         super();
     }
 
-    public Zwierze(String imie, String opis, String plec, String stan_zdrowia, Date data_urodzenia, int nr_schroniska, int nr_klatki, Integer nr_klienta_oddajacy, Integer nr_klienta_adoptujacy, int nr_rasy) {
+    public Zwierze(String imie, String opis, String plec, String stan_zdrowia, String data_urodzenia, int nr_schroniska, int nr_klatki, Integer nr_klienta_oddajacy, Integer nr_klienta_adoptujacy, int nr_rasy) {
 //        this.nr_zwierzecia = nr_zwierzecia;
         this.imie = imie;
         this.opis = opis;
@@ -30,6 +30,8 @@ public class Zwierze {
         this.nr_klienta_adoptujacy = nr_klienta_adoptujacy;
         this.nr_rasy = nr_rasy;
         this.data_urodzenia = data_urodzenia;
+
+
     }
 
     //Getters
@@ -49,7 +51,7 @@ public class Zwierze {
     public String getStan_zdrowia() {
         return stan_zdrowia;
     }
-    public Date getData_urodzenia() {
+    public String getData_urodzenia() {
         return data_urodzenia;
     }
 
@@ -92,7 +94,7 @@ public class Zwierze {
         this.stan_zdrowia = stan_zdrowia;
     }
 
-    public void setData_urodzenia(Date data_urodzenia) {
+    public void setData_urodzenia(String data_urodzenia) {
         this.data_urodzenia = data_urodzenia;
     }
 

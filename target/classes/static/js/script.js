@@ -1,3 +1,6 @@
 function successfullyLogout(){
-    alert("You have been successfully logged out");
+    alert("Nastąpiło poprawne wylogowanie");
+}
+function successfullyAdd(){
+    alert("Zwierzę zostało poprawnie dodane do bazy danych");
 }

@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import java.sql.Types;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -38,7 +39,7 @@ class ZwierzetaDAOTest extends Object {
 
     @Test
     void testSave() {
-        Zwierze zwierze = new Zwierze("Test", "Test Test",  "M", "Zdrowy", new Date(2024-01-01), 1, 1, null , null, 1);
+        Zwierze zwierze = new Zwierze("Test", "Test Test",  "M", "Zdrowy", "2017-01-01", 1, 1, null , null, 1);
         dao.save(zwierze);
     }
 

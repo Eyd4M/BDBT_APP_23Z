@@ -28,7 +28,6 @@ class PracownicyDAOTest extends Object {
     void list() {
         List<Pracownik> listPracownik = dao.list();
         System.out.print(listPracownik);
-
         assertTrue(!listPracownik.isEmpty());
     }
 
