@@ -8,9 +8,28 @@
 
 }
 .table-center {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 70%;
 }
+.table-center th,
+.table-center td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+.table-center th {
+    background-color: #f2f2f2;
+}
+
+.table-center tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-center tr:hover {
+    background-color: #e5e5e5;
+}
+
 .bg-navbar {
     background-color: #826CF0;
 }

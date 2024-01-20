@@ -73,6 +73,32 @@
 
     </div>
 </div>
+<div class="container-fluid">
+    <table border = "1" cellpadding = "10" class="table-center">
+        <!-- Table header -->
+        <thead>
+        <tr> <!-- Table row -->
+            <th>Nr_pracownika</th> <!-- Table column -->
+            <th>Imie</th>
+            <th>Nazwisko</th>
+            <th>Plec</th>
+            <th>Nr_telefonu</th>
+            <th>Data_zatrudnienia</th>
+        </tr>
+        </thead>
+        <!-- Table body -->
+        <tbody>
+        <tr th:each = "pracownik : ${listPracownik}">
+            <td th:text = "${pracownik.nr_pracownika}">Nr_pracownika</td>
+            <td th:text = "${pracownik.imie}">Imie</td>
+            <td th:text = "${pracownik.nazwisko}">Nazwisko</td>
+            <td th:text = "${pracownik.plec}">Plec</td>
+            <td th:text = "${pracownik.nr_telefonu}">Nr_telefonu</td>
+            <td th:text = "${pracownik.data_zatrudnienia}">Data_zatrudnienia</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 <footer class="bg-body-tertiary text-center text-lg-start">
     <!-- Copyright -->
     <div class="text-center p-3 text-white fixed-bottom" style="background-color: #826CF0;">
@@ -80,12 +106,6 @@
     </div>
     <!-- Copyright -->
 </footer>
-
-
-<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
-<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
-<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-<script th:src="@{/js/script.js}"></script>
 
 </body>
 </html>
