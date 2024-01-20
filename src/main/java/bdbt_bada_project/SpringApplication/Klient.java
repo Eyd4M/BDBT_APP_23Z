@@ -1,42 +1,35 @@
 package bdbt_bada_project.SpringApplication;
 import java.util.Date;
 
-public class Pracownik {
-
-    private int nr_pracownika;
+public class Klient {
+    private int nr_klienta;
     private String imie;
     private String drugie_imie;
     private String nazwisko;
     private String plec;
     private Integer pesel;
     private int nr_telefonu;
-    private Date data_zatrudnienia;
-    private Date data_zwolnienia;
-    private Integer nr_konta;
     private int nr_schroniska;
     private int nr_adresu;
 
-    public Pracownik() {
+    public Klient() {
         super();
     }
 
-    public Pracownik(int nr_pracownika, String imie, String nazwisko, String plec, Integer pesel, Date data_zatrudnienia, int nr_schroniska, Date data_zwolnienia,int nr_telefonu,Integer nr_konta, int nr_adresu) {
-        this.nr_pracownika = nr_pracownika;
+    public Klient(int nr_klienta, String imie, String nazwisko, String plec, Integer pesel, Date data_zatrudnienia, int nr_schroniska, Date data_zwolnienia,int nr_telefonu,Integer nr_konta, int nr_adresu) {
+        this.nr_klienta = nr_klienta;
         this.imie = imie;
         this.nazwisko = nazwisko;
         this.plec = plec;
         this.pesel = pesel;
         this.nr_schroniska = nr_schroniska;
         this.nr_telefonu = nr_telefonu;
-        this.data_zatrudnienia = data_zatrudnienia;
-        this.data_zwolnienia = data_zwolnienia;
-        this.nr_konta = nr_konta;
         this.nr_adresu = nr_adresu;
     }
 
     //Getters
-    public int getNr_pracownika() {
-        return nr_pracownika;
+    public int getNr_klienta() {
+        return nr_klienta;
     }
 
     public String getImie() {
@@ -59,18 +52,6 @@ public class Pracownik {
         return nr_telefonu;
     }
 
-    public Date getData_zatrudnienia() {
-        return data_zatrudnienia;
-    }
-
-    public Date getData_zwolnienia() {
-        return data_zwolnienia;
-    }
-
-    public Integer getNr_konta() {
-        return nr_konta;
-    }
-
     public int getNr_schroniska() {
         return nr_schroniska;
     }
@@ -81,8 +62,8 @@ public class Pracownik {
 
     //Setters
 
-    public void setNr_pracownika(int nr_pracownika) {
-        this.nr_pracownika = nr_pracownika;
+    public void setNr_klienta(int nr_klienta) {
+        this.nr_klienta = nr_klienta;
     }
 
     public void setImie(String imie) {
@@ -109,18 +90,6 @@ public class Pracownik {
         this.nr_telefonu = nr_telefonu;
     }
 
-    public void setData_zatrudnienia(Date data_zatrudnienia) {
-        this.data_zatrudnienia = data_zatrudnienia;
-    }
-
-    public void setData_zwolnienia(Date data_zwolnienia) {
-        this.data_zwolnienia = data_zwolnienia;
-    }
-
-    public void setNr_konta(Integer nr_konta) {
-        this.nr_konta = nr_konta;
-    }
-
     public void setNr_schroniska(int nr_schroniska) {
         this.nr_schroniska = nr_schroniska;
     }
@@ -134,16 +103,13 @@ public class Pracownik {
     @Override
     public String toString() {
         return "Pracownik{" +
-                "nr_pracownika=" + nr_pracownika +
+                "nr_pracownika=" + nr_klienta +
                 ", imie='" + imie + '\'' +
                 ", drugie_imie='" + drugie_imie + '\'' +
                 ", nazwisko='" + nazwisko + '\'' +
                 ", plec='" + plec + '\'' +
                 ", pesel=" + pesel +
                 ", nr_telefonu=" + nr_telefonu +
-                ", data_zatrudnienia=" + data_zatrudnienia +
-                ", data_zwolnienia=" + data_zwolnienia +
-                ", nr_konta=" + nr_konta +
                 ", nr_schroniska=" + nr_schroniska +
                 ", nr_adresu=" + nr_adresu +
                 '}';

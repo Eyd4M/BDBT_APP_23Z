@@ -18,6 +18,8 @@ public class AppController implements WebMvcConfigurer {
     private ZwierzetaDAO dao;
     @Autowired
     private PracownicyDAO pracownicyDAO;
+    @Autowired
+    private KlienciDAO kliencidao;
 
 
     @RequestMapping("/animals_user")
