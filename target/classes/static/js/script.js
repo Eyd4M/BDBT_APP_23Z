@@ -16,5 +16,17 @@ function successfullyEdit(){
     }
 }
 
+// $('#myInput').on("keydown", function(e) {
+//     if (e.shiftKey && e.keyCode === 192) {
+//         e.preventDefault();
+//         console.log(e.keyCode);
+//     }
+// })
+
+window.onload = () => {
+    const myInput = document.getElementById('myInput');
+    myInput.onpaste = e => e.preventDefault();
+}
+
 datePickerId.max = new Date().toLocaleDateString('fr-ca')
 //datePickerId.value = "1999-01-01";

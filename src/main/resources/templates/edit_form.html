@@ -25,12 +25,12 @@
             </tr>
             <tr>
                 <td>Imię:</td>
-                <td><input type="text" th:field="*{zwierze.imie}" name="imie" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" required></td>
+                <td><input type="text" th:field="*{zwierze.imie}" name="imie" placeholder="Wpisz imię" title="Używaj tylko polskich znaków!" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" required></td>
             </tr>
 
             <tr>
                 <td>Opis:</td>
-                <td><input type="text" th:field="*{zwierze.opis}" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" required></td>
+                <td><input type="text" th:field="*{zwierze.opis}" placeholder="Wpisz opis"  title="Używaj tylko polskich znaków!" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ.,! ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ.,! ]/i.test(event.key)" maxlength="400" required></td>
             </tr>
 
             <tr>
