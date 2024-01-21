@@ -3,8 +3,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -60,6 +62,26 @@ public class AppController implements WebMvcConfigurer {
         return "redirect:/animals";
     }
 
+    @RequestMapping("/edit/{nr_zwierzecia}")
+    public ModelAndView showeditForm(@PathVariable(name = "nr_zwierzecia") Integer nr_zwierzecia) {
+        ModelAndView mav = new ModelAndView("edit_form");
+        Zwierze zwierze = dao.get(nr_zwierzecia);
+        mav.addObject("zwierze",zwierze);
+        return mav;
+    }
+
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public String update(@ModelAttribute("zwierze") Zwierze zwierze){
+        dao.update(zwierze);
+        return "redirect:/animals_admin";
+    }
+
+    @RequestMapping("/delete/{nr_zwierzecia}")
+    public String delete(@PathVariable(name = "nr_zwierzecia") Integer nr_zwierzecia){
+        dao.delete(nr_zwierzecia);
+
+        return "redirect:/animals_admin";
+    }
 
 
 
@@ -156,6 +178,26 @@ public class AppController implements WebMvcConfigurer {
     }
 
     @Controller
+    public class defaultSiteController
+    {
+        @RequestMapping
+                ("/")
+        public String defaultAfterLogin
+                (HttpServletRequest request) {
+            if
+            (request.isUserInRole
+                    ("ADMIN")) {
+                return "redirect:/index_admin";
+            } else if
+            (request.isUserInRole
+                            ("USER")) {
+                return "redirect:/index_user";
+            } else {
+                return "/index";
+            }
+        }
+    }
+    @Controller
     public class IndexController
     {
         @RequestMapping
@@ -178,6 +220,8 @@ public class AppController implements WebMvcConfigurer {
             }
         }
     }
+
+
 
     @RequestMapping(value={"/main_user"})
     public String showUserPage(Model model) {

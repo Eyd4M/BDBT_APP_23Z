@@ -55,7 +55,11 @@ public class Zwierze {
         return stan_zdrowia;
     }
     public String getData_urodzenia() {
-        return data_urodzenia;
+        if(data_urodzenia != null){
+            return data_urodzenia.substring(0,10);
+        }else{
+            return data_urodzenia;
+        }
     }
 
     public int getNr_schroniska() {
@@ -84,8 +88,8 @@ public class Zwierze {
         int wiek = now - data_urodzenia_year;
         String lata;
 
-        if ((wiek != 2) && (wiek != 3) && (wiek != 4)) {
-            if (wiek == 1) {
+        if ((wiek != 2) && (wiek != 3) && (wiek != 4) && (wiek != 22) && (wiek != 23) && (wiek != 24)) {
+            if ((wiek == 1) || (wiek == 21)) {
                 lata = "rok";
             }else{
                 lata = "lat";

@@ -5,8 +5,8 @@
     <title>Schronisko Pupil</title>
     <link rel="icon" type="image/x-icon" th:href="@{/img/logo_icon.png}">
     <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
-    <link th:rel="stylesheet" th:href="@{css/style_animals.css}"/>
-    <link th:rel="stylesheet" th:href="@{css/style_dropdown.css}"/>
+    <link th:rel="stylesheet" th:href="@{/css/style_animals.css}"/>
+    <link th:rel="stylesheet" th:href="@{/css/style_dropdown.css}"/>
 
 
 
@@ -90,6 +90,8 @@
             <th>Numer klienta (oddający)</th>
             <th>Numer klienta (adoptujący)</th>
             <th>Rasa</th>
+            <th>Edytuj</th>
+            <th>Usuń</th>
         </tr>
         </thead>
         <!-- Table body -->
@@ -106,6 +108,12 @@
             <td th:text = "${zwierze.nr_klienta_oddajacy}">Numer klienta (oddający)</td>
             <td th:text = "${zwierze.nr_klienta_adoptujacy}">Numer klienta (adoptujący)</td>
             <td th:text = "${zwierze.getRasa()}">Rasa</td>
+            <td>
+                <a class="btn btn-primary" th:href="@{'/edit/' + ${zwierze.nr_zwierzecia}}">Edytuj</a>
+            </td>
+            <td>
+                <a class="btn btn-primary" th:href="@{'/delete/' + ${zwierze.nr_zwierzecia}}">Usuń</a>
+            </td>
         </tr>
         </tbody>
     </table>

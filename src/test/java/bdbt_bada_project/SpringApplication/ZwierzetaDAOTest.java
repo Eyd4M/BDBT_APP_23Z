@@ -45,13 +45,31 @@ class ZwierzetaDAOTest extends Object {
 
     @Test
     void testGet() {
+        int nr_zwierzecia = 42;
+        Zwierze zwierze = dao.get(nr_zwierzecia);
+        assertNotNull(zwierze);
     }
 
     @Test
     void testUpdate() {
+        Zwierze zwierze = new Zwierze();
+        zwierze.setNr_zwierzecia(42);
+        zwierze.setImie("TestUpdate");
+        zwierze.setOpis("TestUpdate");
+        zwierze.setPlec("M");
+        zwierze.setData_urodzenia("2005-05-31");
+        zwierze.setStan_zdrowia("Zdrowy");
+        zwierze.setNr_klatki(1);
+        zwierze.setNr_klienta_oddajacy(null);
+        zwierze.setNr_klienta_adoptujacy(null);
+        zwierze.setNr_rasy(3);
+
+        dao.update(zwierze);
     }
 
     @Test
     void testDelete() {
+        Integer nr_zwierzecia = 42;
+        dao.delete(nr_zwierzecia);
     }
 }

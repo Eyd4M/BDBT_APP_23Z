@@ -60,11 +60,19 @@ public class Pracownik {
     }
 
     public String getData_zatrudnienia() {
-        return data_zatrudnienia;
+        if(data_zatrudnienia != null){
+            return data_zatrudnienia.substring(0,10);
+        }else{
+            return data_zatrudnienia;
+        }
     }
 
     public String getData_zwolnienia() {
-        return data_zwolnienia;
+        if(data_zwolnienia != null){
+            return data_zwolnienia.substring(0,10);
+        }else{
+            return data_zwolnienia;
+        }
     }
 
     public Integer getNr_konta() {
