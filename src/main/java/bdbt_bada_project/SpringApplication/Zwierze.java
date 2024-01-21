@@ -1,5 +1,6 @@
 package bdbt_bada_project.SpringApplication;
 
+import java.time.Year;
 import java.util.Date;
 
 public class Zwierze {
@@ -45,7 +46,11 @@ public class Zwierze {
     }
 
     public String getPlec() {
-        return plec;
+        switch (plec) {
+            case "M": return "Samiec";
+            case "K": return "Samica";
+            default: return plec;
+        }
     }
 
     public String getStan_zdrowia() {
@@ -73,6 +78,25 @@ public class Zwierze {
 
     public int getNr_rasy() {
         return nr_rasy;
+    }
+
+    public String getAge() {
+        int now = Year.now().getValue();
+        int data_urodzenia_year = Integer.parseInt(data_urodzenia.substring(0,4));
+        int wiek = now - data_urodzenia_year;
+        String lata;
+
+        if ((wiek != 2) && (wiek != 3) && (wiek != 4)) {
+            if (wiek == 1) {
+                lata = "rok";
+            }else{
+                lata = "lat";
+            }
+        }
+        else{
+            lata = "lata";
+        }
+        return Integer.toString(wiek)  + ' ' + lata;
     }
 
     //Setters

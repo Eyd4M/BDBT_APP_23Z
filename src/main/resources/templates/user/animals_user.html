@@ -63,9 +63,10 @@
     <!-- Table header -->
     <thead>
     <tr> <!-- Table row -->
-      <th>Imie</th>
+      <th>Imię</th>
       <th>Opis</th>
-      <th>Plec</th>
+      <th>Płeć</th>
+      <th>Wiek</th>
       <th>Stan zdrowia</th>
     </tr>
     </thead>
@@ -75,6 +76,7 @@
       <td th:text = "${zwierze.imie}">Imie</td>
       <td th:text = "${zwierze.opis}">Opis</td>
       <td th:text = "${zwierze.plec}">Plec</td>
+      <td th:text = "${zwierze.getAge}">Wiek</td>
       <td th:text = "${zwierze.stan_zdrowia}">Stan zdrowia</td>
     </tr>
     </tbody>
