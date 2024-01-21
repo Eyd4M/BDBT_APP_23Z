@@ -45,13 +45,7 @@ public class Zwierze {
         return opis;
     }
 
-    public String getPlec() {
-        switch (plec) {
-            case "M": return "Samiec";
-            case "K": return "Samica";
-            default: return plec;
-        }
-    }
+    public String getPlec() { return plec; }
 
     public String getStan_zdrowia() {
         return stan_zdrowia;
@@ -99,6 +93,29 @@ public class Zwierze {
         return Integer.toString(wiek)  + ' ' + lata;
     }
 
+    public String getRasa() {
+        String nazwa_rasy;
+
+        switch (nr_rasy) {
+            case 1: return "Jamnik";
+            case 2: return "Dalmatyńczyk";
+            case 3: return "Husky Syberyjski";
+            case 4: return "Kundel";
+            case 5: return "Kot europejski";
+            case 6: return "Kot brytyjski Krótkowłosy";
+            case 7: return "Kot syjamski";
+            case 8: return "Kot norweski leśny";
+            default: return "Zwierze";
+        }
+    }
+
+    public String getPlecText() {
+        switch (plec) {
+            case "M": return "Samiec";
+            case "K": return "Samica";
+            default: return plec;
+        }
+    }
     //Setters
 
 

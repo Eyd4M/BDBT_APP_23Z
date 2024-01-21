@@ -58,6 +58,11 @@
 <div class="container no-padding">
   <img class="logo img-fluid" th:src="@{/img/Pupil_logo.png}" alt="Pupil_logo" >
 </div>
+
+<div class="container-fluid" style="padding: 15px;"></div>
+
+</div>
+
 <div class="container-fluid">
   <table border = "1" cellpadding = "10" class="table-center">
     <!-- Table header -->
@@ -65,19 +70,21 @@
     <tr> <!-- Table row -->
       <th>Imię</th>
       <th>Opis</th>
+      <th>Rasa</th>
       <th>Płeć</th>
       <th>Wiek</th>
-      <th>Stan zdrowia</th>
+      <th>Zaadoptuj</th>
     </tr>
     </thead>
     <!-- Table body -->
     <tbody>
-    <tr th:each = "zwierze : ${listZwierze}">
+    <tr th:each = "zwierze : ${listZwierze}" th:if="${zwierze.nr_klienta_adoptujacy == null}">
       <td th:text = "${zwierze.imie}">Imie</td>
       <td th:text = "${zwierze.opis}">Opis</td>
-      <td th:text = "${zwierze.plec}">Plec</td>
+      <td th:text = "${zwierze.getRasa()}">Rasa</td>
+      <td th:text = "${zwierze.getPlecText()}">Plec</td>
       <td th:text = "${zwierze.getAge}">Wiek</td>
-      <td th:text = "${zwierze.stan_zdrowia}">Stan zdrowia</td>
+      <td><button class="btn btn-primary">Adoptuj</button></td>
     </tr>
     </tbody>
   </table>

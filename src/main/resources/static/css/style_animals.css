@@ -47,13 +47,7 @@
     border-color: #31186c;
 }
 
-.button-new {
-    background-color: #04AA6D; /* Green */
-    border: none;
+.btn-disabled {
+    background-color: #9c92be;
     color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
 }

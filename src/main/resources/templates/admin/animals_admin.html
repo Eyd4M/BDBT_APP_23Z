@@ -65,10 +65,10 @@
 </div>
 
 
- <div class="container-fluid">
+ <div class="container-fluid" style="padding: 15px;">
      <div class="row" style="align-content: center; justify-content: center">
          <!-- Entry to new page -->
-         <a class="button-new" th:href="@{/new}">Enter new sale</a>
+         <a class="btn btn-primary button-new" th:href="@{/new}">Dodaj nowe zwierzę</a>
      </div>
 
  </div>
@@ -83,8 +83,12 @@
             <th>Imię</th>
             <th>Opis</th>
             <th>Płeć</th>
-            <th>Wiek</th>
+            <th>Data urodzenia</th>
             <th>Stan zdrowia</th>
+            <th>Numer klatki</th>
+            <th>Numer klienta (oddający)</th>
+            <th>Numer klienta (adoptujący)</th>
+            <th>Rasa</th>
         </tr>
         </thead>
         <!-- Table body -->
@@ -94,8 +98,12 @@
             <td th:text = "${zwierze.imie}">Imie</td>
             <td th:text = "${zwierze.opis}">Opis</td>
             <td th:text = "${zwierze.plec}">Plec</td>
-            <td th:text = "${zwierze.getAge}">Wiek</td>
+            <td th:text = "${zwierze.data_urodzenia}">Data urodzenia</td>
             <td th:text = "${zwierze.stan_zdrowia}">Stan zdrowia</td>
+            <td th:text = "${zwierze.nr_klatki}">Numer klatki</td>
+            <td th:text = "${zwierze.nr_klienta_oddajacy}">Numer klienta (oddający)</td>
+            <td th:text = "${zwierze.nr_klienta_adoptujacy}">Numer klienta (adoptujący)</td>
+            <td th:text = "${zwierze.getRasa()}">Rasa</td>
         </tr>
         </tbody>
     </table>
