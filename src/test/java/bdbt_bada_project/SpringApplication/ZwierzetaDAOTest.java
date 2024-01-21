@@ -39,7 +39,7 @@ class ZwierzetaDAOTest extends Object {
 
     @Test
     void testSave() {
-        Zwierze zwierze = new Zwierze("Test", "Test Test",  "M", "Zdrowy", "2017-01-01", 1, 1, null , null, 1);
+        Zwierze zwierze = new Zwierze(null,"Test", "Test Test",  "M", "Zdrowy", "2017-01-01", 1, 1, null , null, 1);
         dao.save(zwierze);
     }
 
