@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Schronisko Pupil</title>
+    <link rel="icon" type="image/x-icon" th:href="@{/img/logo_icon.png}">
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+
+</head>
+<body>
+<div align="center">
+    <!-- Page header -->
+    <h1>Edytuj zwierzę</h1>
+
+    <!-- End line/ new line -->
+    <br/>
+    <!--Imie, Opis, Data_urodzenia, Plec, Stan_zdrowia, Nr_schroniska, Nr_klatki, Nr_klienta_oddajacy, Nr_klienta_adoptujacy, Nr_rasy-->
+    <form action="#" th:action="@{/update}" th:objects="${zwierze}" method="post" id="editFormId">
+        <!-- table -->
+        <table border = "1" cellpadding = "10">
+            <!-- Table row -->
+            <tr>
+                <td>Nr zwierzęcia</td>
+                <td><input type="number" th:field="*{zwierze.nr_zwierzecia}" readonly="readonly"></td>
+            </tr>
+            <tr>
+                <td>Imię:</td>
+                <td><input type="text" th:field="*{zwierze.imie}" name="imie" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" required></td>
+            </tr>
+
+            <tr>
+                <td>Opis:</td>
+                <td><input type="text" th:field="*{zwierze.opis}" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" required></td>
+            </tr>
+
+            <tr>
+                <td>Plec:</td>
+                <td>
+                    <input type="radio" id="plecM" name="plec" value="M" th:field="*{zwierze.plec}" required>
+                    <label for="plecM">M</label><br>
+                    <input type="radio" id="plecK" name="plec" value="K" th:field="*{zwierze.plec}" required>
+                    <label for="plecK">K</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td>Stan zdrowia:</td>
+                <td>
+                    <input type="radio" id="zdrowy" name="stan_zdrowia" value="Zdrowy" th:field="*{zwierze.stan_zdrowia}" required>
+                    <label for="zdrowy">Zdrowy</label><br>
+                    <input type="radio" id="chory" name="stan_zdrowia" value="Chory" th:field="*{zwierze.stan_zdrowia}" required>
+                    <label for="chory">Chory</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td>Data urodzenia:</td>
+                <td><input type="date"  min="1999-01-01" id="datePickerId" th:field="*{zwierze.data_urodzenia}" required></td>
+            </tr>
+            <tr>
+                <td>Numer klatki:</td>
+                <td><input type="number" min="1" max="4" th:field="*{zwierze.nr_klatki}" required></td>
+            </tr>
+            <tr>
+                <td>Numer klienta oddającego (Opcjonalne):</td>
+                <td><input type="number" th:field="*{zwierze.nr_klienta_oddajacy}"></td>
+            </tr>
+            <tr>
+                <td>Numer klienta adoptującego (Opcjonalne):</td>
+                <td><input type="number" th:field="*{zwierze.nr_klienta_adoptujacy}"></td>
+            </tr>
+            <tr>
+                <td>Nr rasy:</td>
+                <td><input type="number" min="1" max="8" th:field="*{zwierze.nr_rasy}" required></td>
+            </tr>
+
+            <!-- Button save -->
+            <tr>
+                <td colspan="2"><button type="submit" onclick="successfullyEdit()">Zapisz</button></td>
+            </tr>
+        </table>
+    </form>
+
+</div>
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/script.js}"></script>
+
+
+</body>
+</html>
