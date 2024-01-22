@@ -7,17 +7,22 @@ public class Klient {
     private String drugie_imie;
     private String nazwisko;
     private String plec;
-    private Integer pesel;
+    private String pesel;
     private int nr_telefonu;
     private int nr_schroniska;
     private int nr_adresu;
+
+    private String login;
+
+
 
     public Klient() {
         super();
     }
 
-    public Klient(Integer nr_klienta, String imie, String nazwisko, String plec, Integer pesel, Date data_zatrudnienia, int nr_schroniska, Date data_zwolnienia,int nr_telefonu,Integer nr_konta, int nr_adresu) {
+    public Klient(Integer nr_klienta, String drugie_imie, String imie, String nazwisko, String plec, String pesel, Date data_zatrudnienia, int nr_schroniska, Date data_zwolnienia,int nr_telefonu,Integer nr_konta, int nr_adresu, String login) {
         this.nr_klienta = nr_klienta;
+        this.drugie_imie = drugie_imie;
         this.imie = imie;
         this.nazwisko = nazwisko;
         this.plec = plec;
@@ -25,6 +30,7 @@ public class Klient {
         this.nr_schroniska = nr_schroniska;
         this.nr_telefonu = nr_telefonu;
         this.nr_adresu = nr_adresu;
+        this.login = login;
     }
 
     //Getters
@@ -36,6 +42,10 @@ public class Klient {
         return imie;
     }
 
+    public String getDrugie_imie() {
+        return drugie_imie;
+    }
+
     public String getNazwisko() {
         return nazwisko;
     }
@@ -44,7 +54,7 @@ public class Klient {
         return plec;
     }
 
-    public Integer getPesel() {
+    public String getPesel() {
         return pesel;
     }
 
@@ -58,6 +68,10 @@ public class Klient {
 
     public int getNr_adresu() {
         return nr_adresu;
+    }
+
+    public String getLogin() {
+        return login;
     }
 
     //Setters
@@ -82,7 +96,7 @@ public class Klient {
         this.plec = plec;
     }
 
-    public void setPesel(Integer pesel) {
+    public void setPesel(String pesel) {
         this.pesel = pesel;
     }
 
@@ -98,20 +112,25 @@ public class Klient {
         this.nr_adresu = nr_adresu;
     }
 
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
     //ToString
 
     @Override
     public String toString() {
-        return "Pracownik{" +
-                "nr_pracownika=" + nr_klienta +
+        return "Klient{" +
+                "nr_klienta=" + nr_klienta +
                 ", imie='" + imie + '\'' +
                 ", drugie_imie='" + drugie_imie + '\'' +
                 ", nazwisko='" + nazwisko + '\'' +
                 ", plec='" + plec + '\'' +
-                ", pesel=" + pesel +
+                ", pesel='" + pesel + '\'' +
                 ", nr_telefonu=" + nr_telefonu +
                 ", nr_schroniska=" + nr_schroniska +
                 ", nr_adresu=" + nr_adresu +
+                ", login='" + login + '\'' +
                 '}';
     }
 }

@@ -20,8 +20,8 @@ public class AppController implements WebMvcConfigurer {
     private ZwierzetaDAO dao;
     @Autowired
     private PracownicyDAO pracownicyDAO;
-//    @Autowired
-//    private KlienciDAO klienciDao;
+    @Autowired
+    private KlienciDAO klienciDao;
 
 
     @RequestMapping("/animals_user")
@@ -81,6 +81,15 @@ public class AppController implements WebMvcConfigurer {
         dao.delete(nr_zwierzecia);
 
         return "redirect:/animals_admin";
+    }
+
+
+    @RequestMapping(value={"/main_user"})
+    public String showUserPage(Model model) {
+        /* Import java.util.List */
+        List<Klient> listKlient = klienciDao.list();
+        model.addAttribute("listKlient", listKlient);
+        return "user/main_user";
     }
 
 
@@ -220,12 +229,4 @@ public class AppController implements WebMvcConfigurer {
             }
         }
     }
-
-
-
-    @RequestMapping(value={"/main_user"})
-    public String showUserPage(Model model) {
-        return "user/main_user";
-    }
-
 }

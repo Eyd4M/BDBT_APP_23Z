@@ -73,6 +73,39 @@
 
     </div>
 </div>
+
+<div class="container-fluid">
+    <table border = "1" cellpadding = "10" class="table-center">
+        <!-- Table header -->
+        <thead>
+        <tr> <!-- Table row -->
+            <th>Imię</th>
+            <th>Drugie imię</th>
+            <th>Nazwisko</th>
+            <th>Płeć</th>
+            <th>Pesel</th>
+            <th>Nr_telefonu</th>
+            <th>Adres</th>
+        </tr>
+        </thead>
+        <!-- Table body -->
+        <tbody>
+        <tr th:each = "klient : ${listKlient}" th:if="${klient.login == #httpServletRequest.remoteUser}">
+            <td th:text = "${klient.imie}">Imię</td>
+            <td th:text = "${klient.drugie_imie}">Drugie imię</td>
+            <td th:text = "${klient.nazwisko}">Nazwisko</td>
+            <td th:text = "${klient.plec}">Płeć</td>
+            <td th:text = "${klient.pesel}">Pesel</td>
+            <td th:text = "${klient.nr_telefonu}">Nr_telefonu</td>
+            <td th:text = "${klient.nr_adresu}">Adres</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
 <footer class="bg-body-tertiary text-center text-lg-start">
     <!-- Copyright -->
     <div class="text-center p-3 text-white fixed-bottom" style="background-color: #826CF0;">
