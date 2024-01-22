@@ -13,7 +13,7 @@ public class Pracownik {
     private String data_zatrudnienia;
     private String data_zwolnienia;
     private String nr_konta;
-    private int nr_schroniska;
+    private int nr_schroniska = 1;
     private int nr_adresu;
 
     public Pracownik() {

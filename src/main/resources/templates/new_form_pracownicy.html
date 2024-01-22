@@ -77,6 +77,10 @@
         <td>Imię:</td>
         <td><input class="form-control" type="text" th:field="*{pracownik.imie}" name="imie" placeholder="Wpisz imię" title="Używaj tylko polskich znaków!" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" required></td>
       </tr>
+      <tr>
+        <td>Nazwisko:</td>
+        <td><input class="form-control" type="text" th:field="*{pracownik.nazwisko}" name="nazwisko" placeholder="Wpisz nazwisko" title="Używaj tylko polskich znaków!" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" required></td>
+      </tr>
       <!-- Second row -->
       <tr>
         <td>Drugie imię (Opcjonalne):</td>
@@ -104,7 +108,7 @@
       </tr>
       <tr>
         <td>Numer konta:</td>
-        <td><input class="form-control" type="number" th:field="*{pracownik.nr_konta}" name="Nr konta" placeholder="Wpisz numer konta" maxlength="26" minlength="26" ></td>
+        <td><input class="form-control" type="text" th:field="*{pracownik.nr_konta}" name="Nr konta" placeholder="Wpisz numer konta" maxlength="26" minlength="26" ></td>
       </tr>
       <tr>
       <tr>
