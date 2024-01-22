@@ -3,7 +3,7 @@ import java.util.Date;
 
 public class Pracownik {
 
-    private int nr_pracownika;
+    private Integer nr_pracownika;
     private String imie;
     private String drugie_imie;
     private String nazwisko;
@@ -20,7 +20,7 @@ public class Pracownik {
         super();
     }
 
-    public Pracownik(int nr_pracownika, String imie, String nazwisko, String plec, Integer pesel, String data_zatrudnienia, int nr_schroniska, String data_zwolnienia,int nr_telefonu,Integer nr_konta, int nr_adresu) {
+    public Pracownik(Integer nr_pracownika, String imie, String nazwisko, String plec, Integer pesel, String data_zatrudnienia, int nr_schroniska, String data_zwolnienia,int nr_telefonu,Integer nr_konta, int nr_adresu) {
         this.nr_pracownika = nr_pracownika;
         this.imie = imie;
         this.nazwisko = nazwisko;
@@ -35,7 +35,7 @@ public class Pracownik {
     }
 
     //Getters
-    public int getNr_pracownika() {
+    public Integer getNr_pracownika() {
         return nr_pracownika;
     }
 
@@ -89,7 +89,7 @@ public class Pracownik {
 
     //Setters
 
-    public void setNr_pracownika(int nr_pracownika) {
+    public void setNr_pracownika(Integer nr_pracownika) {
         this.nr_pracownika = nr_pracownika;
     }
 

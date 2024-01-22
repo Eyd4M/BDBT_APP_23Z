@@ -2,7 +2,7 @@ package bdbt_bada_project.SpringApplication;
 import java.util.Date;
 
 public class Klient {
-    private int nr_klienta;
+    private Integer nr_klienta;
     private String imie;
     private String drugie_imie;
     private String nazwisko;
@@ -16,7 +16,7 @@ public class Klient {
         super();
     }
 
-    public Klient(int nr_klienta, String imie, String nazwisko, String plec, Integer pesel, Date data_zatrudnienia, int nr_schroniska, Date data_zwolnienia,int nr_telefonu,Integer nr_konta, int nr_adresu) {
+    public Klient(Integer nr_klienta, String imie, String nazwisko, String plec, Integer pesel, Date data_zatrudnienia, int nr_schroniska, Date data_zwolnienia,int nr_telefonu,Integer nr_konta, int nr_adresu) {
         this.nr_klienta = nr_klienta;
         this.imie = imie;
         this.nazwisko = nazwisko;
@@ -28,7 +28,7 @@ public class Klient {
     }
 
     //Getters
-    public int getNr_klienta() {
+    public Integer getNr_klienta() {
         return nr_klienta;
     }
 
@@ -62,7 +62,7 @@ public class Klient {
 
     //Setters
 
-    public void setNr_klienta(int nr_klienta) {
+    public void setNr_klienta(Integer nr_klienta) {
         this.nr_klienta = nr_klienta;
     }
 
