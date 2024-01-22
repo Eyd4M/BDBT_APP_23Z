@@ -54,25 +54,24 @@
     </div>
 </nav>
 
-<div class="container">
-    <div class="row">
+<div class="container no-padding">
+    <img class="logo img-fluid" th:src="@{/img/Pupil_logo.png}" alt="Pupil_logo" >
+</div>
 
+<div class="container" align="center">
+    <div class="row" style="align-content: center; justify-content: center">
         <div class="col-md-10 mt-5">
             <form method="post" th:action="@{/index}">
                 <div class="form-group">
-                    <label style="font-size:30px" th:inline="text">Welcome <a
-                            style="color: #8eb8e8; text-transform:capitalize"><b>[[${#httpServletRequest.remoteUser}]]</b></a>
-                        to the main page!</label>
-                    <div style="font-size:20px">If you want to logout, click "Logout" button under this text.</div>
+                    <label style="font-size:30px" th:inline="text">Witaj <a
+                            style="color: #826CF0; text-transform:capitalize"><b>[[${#httpServletRequest.remoteUser}]]</b></a>
+                        w panelu użytkownika!
+                    </label>
+                    <div style="font-size:15px">Jeśli chcesz się wylogować, kliknij <button class="btn-link" style="color: #826CF0;" type="submit"><b>tutaj</b></button> lub na napis w prawym górnym rogu</div>
                 </div>
-
-                <button class="btn btn-primary" type="submit" onclick="successfullyLogout()" value="Sign Out">Logout
-                </button>
             </form>
         </div>
-
     </div>
-</div>
 
 <div class="container-fluid">
     <table border = "1" cellpadding = "10" class="table-center">

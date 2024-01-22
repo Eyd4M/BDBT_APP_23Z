@@ -29,7 +29,8 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Zwierzaki do adopcji
+                    <a class="nav-link active" href="#">Zwierzaki do adopcji
+                        <span class="sr-only">(current)</span>
                     </a>
                 </li>
 
@@ -61,10 +62,9 @@
 
     <div align="center" class="container-fluid">
         <!-- Page header -->
-        <h1 style="padding-top: 25px;">Dodaj nowe zwierzę</h1>
+        <h1 style="padding-top: 10px;">Dodaj nowe zwierzę</h1>
 
-        <!-- End line/ new line -->
-        <br/>
+
         <!--Imie, Opis, Data_urodzenia, Plec, Stan_zdrowia, Nr_schroniska, Nr_klatki, Nr_klienta_oddajacy, Nr_klienta_adoptujacy, Nr_rasy-->
         <form action="#" th:action="@{/save}" th:objects="${zwierze}" method="post" id="newFormId">
             <!-- table -->

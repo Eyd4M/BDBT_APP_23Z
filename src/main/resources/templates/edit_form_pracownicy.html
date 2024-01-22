@@ -65,10 +65,9 @@
 
   <div align="center">
     <!-- Page header -->
-    <h1>Edytuj pracownika</h1>
+    <h1 style="padding-top: 10px;">Edytuj pracownika</h1>
 
-    <!-- End line/ new line -->
-    <br/>
+
     <!--Imie, drugie_imie, nazwisko, Plec, pesel, Nr_schroniska, nr_telefonu, data_zatrudnienia,data_zwolnienia, nr_konta, nr_adresu-->
     <form action="#" th:action="@{/update_p}" th:objects="${pracownik}" method="post" id="editFormId">
       <!-- table -->
@@ -114,7 +113,7 @@
         <tr>
         <tr>
           <td>Numer telefonu:</td>
-          <td><input class="form-control" type="number" th:field="*{pracownik.nr_telefonu}" name="Nr telefonu" placeholder="Wpisz numer telefonu" maxlength="15" minlength="9"required oninput="validateAccountNumber(this)"></td>
+          <td><input class="form-control" type="number" th:field="*{pracownik.nr_telefonu}" name="Nr telefonu" placeholder="Wpisz numer telefonu" maxlength="15" minlength="9" required oninput="validateAccountNumber(this)"></td>
         </tr>
         <tr>
         <tr>

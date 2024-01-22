@@ -45,3 +45,23 @@
     background-color: #9c92be;
     color: white;
 }
+.btn-link {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color: #0000EE;
+    padding: 0;
+    text-decoration: underline;
+    font-family: inherit;
+    font-size: inherit;
+}
+.logo {
+    position: absolute;
+    z-index: 1000;
+    width: 20%;
+    height: auto;
+    left: -2%;
+    padding-top: -5%;
+
+}
