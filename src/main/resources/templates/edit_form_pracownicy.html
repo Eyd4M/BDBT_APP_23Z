@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+  <meta charset="UTF-8">
+  <title>Schronisko Pupil</title>
+  <link rel="icon" type="image/x-icon" th:href="@{/img/logo_icon.png}">
+  <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+
+</head>
+<body>
+<div align="center">
+  <!-- Page header -->
+  <h1>Edytuj pracownika</h1>
+
+  <!-- End line/ new line -->
+  <br/>
+  <!--Imie, drugie_imie, nazwisko, Plec, pesel, Nr_schroniska, nr_telefonu, data_zatrudnienia,data_zwolnienia, nr_konta, nr_adresu-->
+  <form action="#" th:action="@{/update}" th:objects="${pracownik}" method="post" id="editFormId">
+    <!-- table -->
+    <table border = "1" cellpadding = "10">
+      <!-- Table row -->
+      <tr>
+        <td>Nr pracownika</td>
+        <td><input type="number" th:field="*{pracownik.nr_pracownika}" readonly="readonly"></td>
+      </tr>
+      <tr>
+        <td>Imię:</td>
+        <td><input type="text" th:field="*{pracownik.imie}" name="imie" placeholder="Wpisz imię" title="Używaj tylko polskich znaków!" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" required></td>
+      </tr>
+      <tr>
+        <td>Drugie imię (Opcjonalne):</td>
+        <td><input type="text" th:field="*{pracownik.drugie_imie}" name="drugie_imie" placeholder="Wpisz drugie imię" title="Używaj tylko polskich znaków!" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" ></td>
+      </tr>
+      <tr>
+        <td>Nazwisko:</td>
+        <td><input type="text" th:field="*{pracownik.nazwisko}" name="nazwisko" placeholder="Wpisz nazwisko" title="Używaj tylko polskich znaków!" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" required></td>
+      </tr>
+      <tr>
+        <td>Plec:</td>
+        <td>
+          <input type="radio" id="plecM" name="plec" value="M" th:field="*{zwierze.plec}" required>
+          <label for="plecM">M</label><br>
+          <input type="radio" id="plecK" name="plec" value="K" th:field="*{zwierze.plec}" required>
+          <label for="plecK">K</label><br>
+        </td>
+      </tr>
+      <tr>
+        <td>Data zatrudnienia:</td>
+        <td><input type="date"  min="1999-01-01" id="datePickerId" th:field="*{pracownik.data_zatrudnienia}" required></td>
+      </tr>
+
+      <!-- Button save -->
+      <tr>
+        <td colspan="2"><button type="submit" onclick="successfullyEdit()">Zapisz</button></td>
+      </tr>
+    </table>
+  </form>
+
+</div>
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/script.js}"></script>
+
+
+</body>
+</html>
