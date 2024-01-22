@@ -8,11 +8,11 @@ public class Pracownik {
     private String drugie_imie;
     private String nazwisko;
     private String plec;
-    private Integer pesel;
-    private int nr_telefonu;
+    private String pesel;
+    private String nr_telefonu;
     private String data_zatrudnienia;
     private String data_zwolnienia;
-    private Integer nr_konta;
+    private String nr_konta;
     private int nr_schroniska;
     private int nr_adresu;
 
@@ -20,9 +20,10 @@ public class Pracownik {
         super();
     }
 
-    public Pracownik(Integer nr_pracownika, String imie, String nazwisko, String plec, Integer pesel, String data_zatrudnienia, int nr_schroniska, String data_zwolnienia,int nr_telefonu,Integer nr_konta, int nr_adresu) {
+    public Pracownik(Integer nr_pracownika, String imie, String nazwisko, String plec, String pesel, String data_zatrudnienia, int nr_schroniska, String data_zwolnienia,String nr_telefonu,String nr_konta, int nr_adresu, String drugie_imie) {
         this.nr_pracownika = nr_pracownika;
         this.imie = imie;
+        this.drugie_imie = drugie_imie;
         this.nazwisko = nazwisko;
         this.plec = plec;
         this.pesel = pesel;
@@ -42,6 +43,9 @@ public class Pracownik {
     public String getImie() {
         return imie;
     }
+    public String getDrugie_imie() {
+        return drugie_imie;
+    }
 
     public String getNazwisko() {
         return nazwisko;
@@ -51,11 +55,11 @@ public class Pracownik {
         return plec;
     }
 
-    public Integer getPesel() {
+    public String getPesel() {
         return pesel;
     }
 
-    public int getNr_telefonu() {
+    public String getNr_telefonu() {
         return nr_telefonu;
     }
 
@@ -75,7 +79,7 @@ public class Pracownik {
         }
     }
 
-    public Integer getNr_konta() {
+    public String getNr_konta() {
         return nr_konta;
     }
 
@@ -96,7 +100,6 @@ public class Pracownik {
     public void setImie(String imie) {
         this.imie = imie;
     }
-
     public void setDrugie_imie(String drugie_imie) {
         this.drugie_imie = drugie_imie;
     }
@@ -109,11 +112,11 @@ public class Pracownik {
         this.plec = plec;
     }
 
-    public void setPesel(Integer pesel) {
+    public void setPesel(String pesel) {
         this.pesel = pesel;
     }
 
-    public void setNr_telefonu(int nr_telefonu) {
+    public void setNr_telefonu(String nr_telefonu) {
         this.nr_telefonu = nr_telefonu;
     }
 
@@ -125,7 +128,7 @@ public class Pracownik {
         this.data_zwolnienia = data_zwolnienia;
     }
 
-    public void setNr_konta(Integer nr_konta) {
+    public void setNr_konta(String nr_konta) {
         this.nr_konta = nr_konta;
     }
 

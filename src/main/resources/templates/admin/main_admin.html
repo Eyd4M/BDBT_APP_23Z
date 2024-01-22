@@ -85,6 +85,8 @@
             <th>Plec</th>
             <th>Nr_telefonu</th>
             <th>Data_zatrudnienia</th>
+            <th>Edytuj</th>
+            <th>Usuń</th>
         </tr>
         </thead>
         <!-- Table body -->
@@ -97,10 +99,10 @@
             <td th:text = "${pracownik.nr_telefonu}">Nr_telefonu</td>
             <td th:text = "${pracownik.data_zatrudnienia}">Data_zatrudnienia</td>
             <td>
-                <a class="btn btn-primary" th:href="@{'/edit/' + ${pracownik.nr_pracownika}}">Edytuj</a>
+                <a class="btn btn-primary" th:href="@{'/edit_p/' + ${pracownik.nr_pracownika}}">Edytuj</a>
             </td>
             <td>
-                <a class="btn btn-primary" th:href="@{'/delete/' + ${pracownik.nr_pracownika}}">Usuń</a>
+                <a class="btn btn-primary" th:href="@{'/delete_p/' + ${pracownik.nr_pracownika}}">Usuń</a>
             </td>
         </tr>
         </tbody>

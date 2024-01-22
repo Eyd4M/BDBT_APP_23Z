@@ -82,6 +82,39 @@ public class AppController implements WebMvcConfigurer {
 
         return "redirect:/animals_admin";
     }
+    @RequestMapping("/new_p")
+    public String showNewForm_p(Model model) {
+        Pracownik pracownik = new Pracownik();
+        model.addAttribute("pracownik", pracownik);
+
+        return "new_form_pracownicy";
+    }
+
+    @RequestMapping(value = "/save_p", method = RequestMethod.POST)
+    public String save(@ModelAttribute("pracownik") Pracownik pracownik) {
+        pracownicyDAO.save(pracownik);
+        return "redirect:/main_admin";
+    }
+
+    @RequestMapping("/edit_p/{nr_pracownika}")
+    public ModelAndView showeditForm_p(@PathVariable(name = "nr_pracownika") Integer nr_pracownika) {
+        ModelAndView mav = new ModelAndView("edit_form_pracownicy");
+        Pracownik pracownik = pracownicyDAO.get(nr_pracownika);
+        mav.addObject("pracownik",pracownik);
+        return mav;
+    }
+
+    @RequestMapping(value = "/update_p", method = RequestMethod.POST)
+    public String update(@ModelAttribute("pracownik") Pracownik pracownik){
+        pracownicyDAO.update(pracownik);
+        return "redirect:/main_admin";
+    }
+
+    @RequestMapping("/delete_p/{nr_pracownika}")
+    public String delete_p(@PathVariable(name = "nr_pracownika") Integer nr_pracownika){
+        pracownicyDAO.delete(nr_pracownika);
+        return "redirect:/main_admin";
+    }
 
 
     @RequestMapping(value={"/main_user"})

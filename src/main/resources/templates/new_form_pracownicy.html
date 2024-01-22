@@ -6,39 +6,32 @@
   <link rel="icon" type="image/x-icon" th:href="@{/img/logo_icon.png}">
   <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
 
+
 </head>
 <body>
 <div align="center">
   <!-- Page header -->
-  <h1>Edytuj pracownika</h1>
+  <h1>Dodaj nowego pracownika</h1>
 
   <!-- End line/ new line -->
   <br/>
   <!--Imie, drugie_imie, nazwisko, Plec, pesel, Nr_schroniska, nr_telefonu, data_zatrudnienia,data_zwolnienia, nr_konta, nr_adresu-->
-  <form action="#" th:action="@{/update_p}" th:objects="${pracownik}" method="post" id="editFormId">
+  <form action="#" th:action="@{/save_p}" th:objects="${pracownik}" method="post" id="newFormId">
     <!-- table -->
     <table border = "1" cellpadding = "10">
       <!-- Table row -->
       <tr>
-        <td>Nr pracownika</td>
-        <td><input type="number" th:field="*{pracownik.nr_pracownika}" readonly="readonly"></td>
-      </tr>
-      <tr>
-        <td>Nr adresu</td>
-        <td><input type="number" th:field="*{pracownik.nr_adresu}" required></td>
-      </tr>
-      <tr>
         <td>Imię:</td>
         <td><input type="text" th:field="*{pracownik.imie}" name="imie" placeholder="Wpisz imię" title="Używaj tylko polskich znaków!" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" required></td>
       </tr>
+      <!-- Second row -->
       <tr>
         <td>Drugie imię (Opcjonalne):</td>
         <td><input type="text" th:field="*{pracownik.drugie_imie}" name="drugie_imie" placeholder="Wpisz drugie imię" title="Używaj tylko polskich znaków!" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" ></td>
       </tr>
-      <tr>
-        <td>Nazwisko:</td>
-        <td><input type="text" th:field="*{pracownik.nazwisko}" name="nazwisko" placeholder="Wpisz nazwisko" title="Używaj tylko polskich znaków!" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" required></td>
-      </tr>
+      <!-- Third row -->
+
+      <!-- Fourth row -->
       <tr>
         <td>Plec:</td>
         <td>
@@ -47,6 +40,10 @@
           <input type="radio" id="plecK" name="plec" value="K" th:field="*{pracownik.plec}" required>
           <label for="plecK">K</label><br>
         </td>
+      </tr>
+      <tr>
+        <td>Nr adresu</td>
+        <td><input type="number" th:field="*{pracownik.nr_adresu}" required></td>
       </tr>
       <tr>
         <td>Data zatrudnienia:</td>
@@ -59,19 +56,18 @@
       <tr>
       <tr>
         <td>Numer telefonu:</td>
-        <td><input type="number" th:field="*{pracownik.nr_telefonu}" name="Nr telefonu" placeholder="Wpisz numer telefonu" maxlength="15" minlength="15"required></td>
+        <td><input type="number" th:field="*{pracownik.nr_telefonu}" name="Nr telefonu" placeholder="Wpisz numer telefonu" maxlength="15" required></td>
       </tr>
       <tr>
       <tr>
         <td>Numer pesel:</td>
-        <td><input type="number" th:field="*{pracownik.pesel}" name="pesel" placeholder="Wpisz numer pesel" maxlength="11" minlength="11"></td>
+        <td><input type="number" th:field="*{pracownik.nr_pesel}" name="Nr pesel" placeholder="Wpisz numer pesel" maxlength="11" minlength="11"></td>
       </tr>
       <tr>
 
-
       <!-- Button save -->
       <tr>
-        <td colspan="2"><button type="submit" onclick="successfullyEdit()">Zapisz</button></td>
+        <td colspan="2"><button type="submit" onclick="successfullyAdd()">Zapisz</button></td>
       </tr>
     </table>
   </form>
@@ -82,7 +78,6 @@
 <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
 <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
 <script th:src="@{/js/script.js}"></script>
-
 
 </body>
 </html>

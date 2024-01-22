@@ -32,18 +32,38 @@ class PracownicyDAOTest extends Object {
     }
 
     @Test
-    void save() {
+    void testSave() {
+        Pracownik pracownik = new Pracownik(null,"Albert","Dust","M","34567895435","2005-08-30",1,"2005-09-30","236238463453456","243235463492462354634523",6,null);
+        dao.save(pracownik);
     }
 
     @Test
-    void get() {
+    void testGet() {
+        int nr_pracownika = 2;
+        Pracownik pracownik = dao.get(nr_pracownika);
+        assertNotNull(pracownik);
     }
 
     @Test
-    void update() {
+    void testUpdate() {
+        Pracownik pracownik = new Pracownik();
+        pracownik.setNr_pracownika(21);
+        pracownik.setImie("TestUpdate");
+        pracownik.setDrugie_imie("TestUpdate");
+        pracownik.setPlec("M");
+        pracownik.setData_zatrudnienia("2005-05-31");
+        pracownik.setData_zwolnienia("2005-07-30");
+        pracownik.setNazwisko("Einstain");
+        pracownik.setNr_konta("246235463452462354634523");
+        pracownik.setNr_telefonu("246235463453456");
+        pracownik.setPesel("24623546345");
+        pracownik.setNr_adresu(8);
+        dao.update(pracownik);
     }
 
     @Test
-    void delete() {
+    void testDelete() {
+        Integer nr_pracownika = 42;
+        dao.delete(nr_pracownika);
     }
 }
