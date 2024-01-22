@@ -16,6 +16,11 @@ function successfullyEdit(){
     }
 }
 
+function validateAccountNumber(input) {
+        // Usuń wszystkie znaki niebędące cyframi
+        input.value = input.value.replace(/\D/g, '');
+    }
+
 // $('#myInput').on("keydown", function(e) {
 //     if (e.shiftKey && e.keyCode === 192) {
 //         e.preventDefault();

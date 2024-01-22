@@ -108,17 +108,17 @@
       </tr>
       <tr>
         <td>Numer konta:</td>
-        <td><input class="form-control" type="text" th:field="*{pracownik.nr_konta}" name="Nr konta" placeholder="Wpisz numer konta" maxlength="26" minlength="26" ></td>
+        <td><input class="form-control" type="text" th:field="*{pracownik.nr_konta}" name="Nr konta" placeholder="Wpisz numer konta" maxlength="26" minlength="26" oninput="validateAccountNumber(this)"></td>
       </tr>
       <tr>
       <tr>
         <td>Numer telefonu:</td>
-        <td><input class="form-control" type="text" th:field="*{pracownik.nr_telefonu}" name="Nr telefonu" placeholder="Wpisz numer telefonu" maxlength="15" required></td>
+        <td><input class="form-control" type="text" th:field="*{pracownik.nr_telefonu}" name="Nr telefonu" placeholder="Wpisz numer telefonu" maxlength="15" minlength="9" required oninput="validateAccountNumber(this)"></td>
       </tr>
       <tr>
       <tr>
         <td>Numer pesel:</td>
-        <td><input class="form-control" type="text" th:field="*{pracownik.pesel}" name="Nr pesel" placeholder="Wpisz numer pesel" maxlength="11" minlength="11"></td>
+        <td><input class="form-control" type="text" th:field="*{pracownik.pesel}" name="Nr pesel" placeholder="Wpisz numer pesel" maxlength="11" minlength="11" oninput="validateAccountNumber(this)"></td>
       </tr>
       <tr>
 
