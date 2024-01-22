@@ -5,7 +5,51 @@
   <title>Schronisko Pupil</title>
   <link rel="icon" type="image/x-icon" th:href="@{/img/logo_icon.png}">
   <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+  <link rel="icon" type="image/x-icon" th:href="@{/img/logo_icon.png}">
+  <link th:rel="stylesheet" th:href="@{/css/style_login.css}"/>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-navbar static-top drop-shadow fwd-navbar">
+    <div class="container-fluid ml-0">
+      <a class="navbar-brand mb-0 h1" th:href="@{/index}"><img th:src="@{/img/logo_icon.png}" width="30" height="30" class="d-inline-block align-top" alt="logo-navbar" style="margin-right: 0.5rem;">
+        Schronisko Pupil</a>
 
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+              aria-controls="navbarResponsive"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container-fluid collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/index}">Strona Główna</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/animals}">Zwierzaki do adopcji</a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Panel
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <div class="dropdown show">
+              <a class="nav-link dropdown-toggle" th:inline="text" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#8eb8e8;">
+                You are logged in as <b style="text-transform:capitalize">[[${#httpServletRequest.remoteUser}]]</b>
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                <form method="post" th:action="@{/index}">
+                  <button class="dropdown-item" type="submit" onclick="successfullyLogout()" value="Sign Out">Wyloguj się</button>
+                </form>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 </head>
 <body>
@@ -56,24 +100,30 @@
       <tr>
       <tr>
         <td>Numer telefonu:</td>
-        <td><input type="number" th:field="*{pracownik.nr_telefonu}" name="Nr telefonu" placeholder="Wpisz numer telefonu" maxlength="15" required></td>
+        <td><input type="text" th:field="*{pracownik.nr_telefonu}" name="Nr telefonu" placeholder="Wpisz numer telefonu" maxlength="15" required></td>
       </tr>
       <tr>
       <tr>
         <td>Numer pesel:</td>
-        <td><input type="number" th:field="*{pracownik.nr_pesel}" name="Nr pesel" placeholder="Wpisz numer pesel" maxlength="11" minlength="11"></td>
+        <td><input type="text" th:field="*{pracownik.pesel}" name="Nr pesel" placeholder="Wpisz numer pesel" maxlength="11" minlength="11"></td>
       </tr>
       <tr>
 
       <!-- Button save -->
       <tr>
-        <td colspan="2"><button type="submit" onclick="successfullyAdd()">Zapisz</button></td>
+        <td colspan="2"><button class="btn btn-primary" type="submit" onclick="successfullyAdd()">Zapisz</button></td>
       </tr>
     </table>
   </form>
 
 </div>
-
+<footer class="bg-body-tertiary text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3 text-white fixed-bottom" style="background-color: #826CF0;">
+    © 2024 Copyright: Adam Dołowy, Piotr Kosiara
+  </div>
+  <!-- Copyright -->
+</footer>
 <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
 <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
 <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
