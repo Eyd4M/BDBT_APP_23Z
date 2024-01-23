@@ -76,15 +76,15 @@
         </tr>
         <tr>
           <td>Imię:</td>
-          <td><input class="form-control" type="text" th:field="*{klient.imie}" name="imie" placeholder="Wpisz imię" title="Używaj tylko polskich znaków!" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" required ></td>
+          <td><input class="form-control" type="text" th:field="*{klient.imie}" name="imie" placeholder="Wpisz imię" title="Używaj tylko polskich znaków! (1-20 liter)" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" required ></td>
         </tr>
         <tr>
           <td>Drugie imię (Opcjonalne):</td>
-          <td><input class="form-control" type="text" th:field="*{klient.drugie_imie}" name="drugie_imie" placeholder="Wpisz drugie imię" title="Używaj tylko polskich znaków!" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" ></td>
+          <td><input class="form-control" type="text" th:field="*{klient.drugie_imie}" name="drugie_imie" placeholder="Wpisz drugie imię" title="Używaj tylko polskich znaków! (1-20 liter)" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" ></td>
         </tr>
         <tr>
           <td>Nazwisko:</td>
-          <td><input class="form-control" type="text" th:field="*{klient.nazwisko}" name="nazwisko" placeholder="Wpisz nazwisko" title="Używaj tylko polskich znaków!" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" required ></td>
+          <td><input class="form-control" type="text" th:field="*{klient.nazwisko}" name="nazwisko" placeholder="Wpisz nazwisko" title="Używaj tylko polskich znaków! (1-20 liter)" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" required ></td>
         </tr>
         <tr>
           <td>Plec:</td>
@@ -97,7 +97,7 @@
         </tr>
         <tr>
           <td>Numer telefonu:</td>
-          <td><input class="form-control" type="number" th:field="*{klient.nr_telefonu}" name="Nr telefonu" placeholder="Wpisz numer telefonu" minlength="9" maxlength="15"  required></td>
+          <td><input class="form-control" type="text" th:field="*{klient.nr_telefonu}" name="Nr telefonu" placeholder="Wpisz numer telefonu" title="Podaj przynajmniej 9 cyfr" pattern=".{9,}" maxlength="15"  required oninput="validateAccountNumber(this)"></td>
         </tr>
 
         <tr>
@@ -110,7 +110,7 @@
         </tr>
         <!-- Button save -->
         <tr>
-          <td colspan="2"><button class="btn btn-primary" type="submit" onclick="successfullyEdit()">Zapisz</button></td>
+          <td colspan="2"><button class="btn btn-primary" type="submit" onclick="successfullyEditYourData()">Zapisz</button></td>
         </tr>
       </table>
     </form>
@@ -126,7 +126,8 @@
 <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
 <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
 <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-<script th:src="@{/js/script.js}"></script>
+<script th:src="@{/js/edit_form_script.js}"></script>
+<script th:src="@{/js/logout_script.js}"></script>
 
 
 </body>

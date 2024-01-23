@@ -67,7 +67,7 @@
                             style="color: #826CF0; text-transform:capitalize"><b>[[${#httpServletRequest.remoteUser}]]</b></a>
                         w panelu użytkownika!
                     </label>
-                    <div style="font-size:15px">Jeśli chcesz się wylogować, kliknij <button class="btn-link" style="color: #826CF0;" type="submit"><b>tutaj</b></button> lub na napis w prawym górnym rogu</div>
+                    <div style="font-size:15px">Jeśli chcesz się wylogować, kliknij <button class="btn-link" style="color: #826CF0;" type="submit" onclick="successfullyLogout()"><b>tutaj</b></button> lub na napis w prawym górnym rogu</div>
                 </div>
             </form>
         </div>
@@ -129,6 +129,7 @@
 <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
 <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
 <script th:src="@{/js/script.js}"></script>
+<script th:src="@{/js/logout_script.js}"></script>
 
 </body>
 </html>

@@ -83,15 +83,15 @@
         </tr>
         <tr>
           <td>Imię:</td>
-          <td><input class="form-control" type="text" th:field="*{pracownik.imie}" name="imie" placeholder="Wpisz imię" title="Używaj tylko polskich znaków!" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" required></td>
+          <td><input class="form-control" type="text" th:field="*{pracownik.imie}" name="imie" placeholder="Wpisz imię" title="Używaj tylko polskich znaków! (1-20 liter)" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" required></td>
         </tr>
         <tr>
           <td>Drugie imię (Opcjonalne):</td>
-          <td><input class="form-control" type="text" th:field="*{pracownik.drugie_imie}" name="drugie_imie" placeholder="Wpisz drugie imię" title="Używaj tylko polskich znaków!" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" ></td>
+          <td><input class="form-control" type="text" th:field="*{pracownik.drugie_imie}" name="drugie_imie" placeholder="Wpisz drugie imię" title="Używaj tylko polskich znaków! (1-20 liter)" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" ></td>
         </tr>
         <tr>
           <td>Nazwisko:</td>
-          <td><input class="form-control" type="text" th:field="*{pracownik.nazwisko}" name="nazwisko" placeholder="Wpisz nazwisko" title="Używaj tylko polskich znaków!" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" required></td>
+          <td><input class="form-control" type="text" th:field="*{pracownik.nazwisko}" name="nazwisko" placeholder="Wpisz nazwisko" title="Używaj tylko polskich znaków! (1-20 liter)" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" required></td>
         </tr>
         <tr>
           <td>Plec:</td>
@@ -108,24 +108,24 @@
         </tr>
         <tr>
           <td>Numer konta:</td>
-          <td><input class="form-control" type="number" th:field="*{pracownik.nr_konta}" name="Nr konta" placeholder="Wpisz numer konta" maxlength="26" minlength="26" oninput="validateAccountNumber(this)"></td>
+          <td><input class="form-control" type="text" th:field="*{pracownik.nr_konta}" name="Nr konta" placeholder="Wpisz numer konta" title="Podaj 26-cyfrowy numer konta" pattern=".{26,}" maxlength="26" oninput="validateAccountNumber(this)"></td>
         </tr>
         <tr>
         <tr>
           <td>Numer telefonu:</td>
-          <td><input class="form-control" type="number" th:field="*{pracownik.nr_telefonu}" name="Nr telefonu" placeholder="Wpisz numer telefonu" maxlength="15" minlength="9" required oninput="validateAccountNumber(this)"></td>
+          <td><input class="form-control" type="text" th:field="*{pracownik.nr_telefonu}" name="Nr telefonu" placeholder="Wpisz numer telefonu" title="Podaj przynajmniej 9 cyfr" pattern=".{9,}" maxlength="15" required oninput="validateAccountNumber(this)"></td>
         </tr>
         <tr>
         <tr>
           <td>Numer pesel:</td>
-          <td><input class="form-control" type="number" th:field="*{pracownik.pesel}" name="pesel" placeholder="Wpisz numer pesel" maxlength="11" minlength="11" oninput="validateAccountNumber(this)"></td>
+          <td><input class="form-control" type="text" th:field="*{pracownik.pesel}" name="pesel" placeholder="Wpisz numer pesel" title="Podaj 11-cyfrowy PESEL" pattern=".{11,}" maxlength="11" oninput="validateAccountNumber(this)"></td>
         </tr>
         <tr>
 
 
         <!-- Button save -->
         <tr>
-          <td colspan="2"><button class="btn btn-primary" type="submit" onclick="successfullyEdit()">Zapisz</button></td>
+          <td colspan="2"><button class="btn btn-primary" type="submit" onclick="successfullyEditWorker()">Zapisz</button></td>
         </tr>
       </table>
     </form>
@@ -140,7 +140,9 @@
 <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
 <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
 <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-<script th:src="@{/js/script.js}"></script>
+<script th:src="@{/js/edit_form_script.js}"></script>
+<script th:src="@{/js/logout_script.js}"></script>
+<script th:src="@{/js/max_date_script.js}"></script>
 
 
 </body>
