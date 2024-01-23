@@ -70,7 +70,10 @@
     <form action="#" th:action="@{/update_k}" th:objects="${klient}" method="post" id="editFormId">
       <!-- table -->
       <table border = "1" cellpadding = "10">
-        <!-- Table row -->
+        <tr>
+          <td>Nr klienta</td>
+          <td><input class="form-control" type="number" th:field="*{klient.nr_klienta}" readonly="readonly"></td>
+        </tr>
         <tr>
           <td>Imię:</td>
           <td><input class="form-control" type="text" th:field="*{klient.imie}" name="imie" placeholder="Wpisz imię" title="Używaj tylko polskich znaków!" pattern="[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+" onkeydown="return /[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]/i.test(event.key)" maxlength="20" required ></td>
@@ -99,11 +102,11 @@
 
         <tr>
           <td>Numer pesel:</td>
-          <td><input class="form-control" type="number" th:field="*{klient.pesel}" name="pesel" placeholder="Wpisz numer pesel" minlength="11" maxlength="11"  disabled></td>
+          <td><input class="form-control" type="number" th:field="*{klient.pesel}" name="pesel" placeholder="Wpisz numer pesel" minlength="11" maxlength="11"  readonly required></td>
         </tr>
         <tr>
           <td>Nr adresu:</td>
-          <td><input class="form-control" type="number" th:field="*{klient.nr_adresu}" name="adres" placeholder="Wpisz numer adresu"  disabled></td>
+          <td><input class="form-control" type="number" th:field="*{klient.nr_adresu}" name="adres" placeholder="Wpisz numer adresu"  readonly required></td>
         </tr>
         <!-- Button save -->
         <tr>

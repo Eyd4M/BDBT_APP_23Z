@@ -11,7 +11,6 @@ public class Klient {
     private String nr_telefonu;
     private int nr_schroniska = 1;
     private int nr_adresu;
-
     private String login;
 
 

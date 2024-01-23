@@ -47,7 +47,7 @@ class KlienciDAOTest extends Object {
     @Test
     void update() {
         Klient klient = new Klient();
-        klient.setNr_klienta(6);
+        klient.setNr_klienta(21);
         klient.setImie("TestUpdate");
         klient.setNazwisko("TestUpdate");
         klient.setPlec("M");
