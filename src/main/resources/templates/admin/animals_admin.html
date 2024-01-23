@@ -65,6 +65,14 @@
 </div>
 
 
+ <div class="container-fluid mid">
+     <div class="row">
+         <div class="col-md-12 text-center" style="font-size: 1.5rem; color: #826CF0; margin-top: 15px;">
+             <div class ="text-div">ZARZĄDZAJ ZWIERZĘTAMI</div>
+         </div>
+     </div>
+ </div>
+
  <div class="container-fluid" style="padding: 15px;">
      <div class="row" style="align-content: center; justify-content: center">
          <!-- Entry to new page -->
@@ -112,7 +120,7 @@
                 <a class="btn btn-primary" th:href="@{'/edit/' + ${zwierze.nr_zwierzecia}}">Edytuj</a>
             </td>
             <td>
-                <a class="btn btn-primary" th:href="@{'/delete/' + ${zwierze.nr_zwierzecia}}">Usuń</a>
+                <a class="btn btn-primary" th:href="@{'/delete/' + ${zwierze.nr_zwierzecia}}" onclick="return confirm('Czy na pewno chcesz usunąć ten rekord?');">Usuń</a>
             </td>
         </tr>
         </tbody>

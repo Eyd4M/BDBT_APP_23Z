@@ -52,9 +52,12 @@
     cursor: pointer;
     color: #0000EE;
     padding: 0;
-    text-decoration: underline;
+    text-decoration: none;
     font-family: inherit;
     font-size: inherit;
+}
+.btn-link:hover{
+    text-decoration: underline;
 }
 .logo {
     position: absolute;

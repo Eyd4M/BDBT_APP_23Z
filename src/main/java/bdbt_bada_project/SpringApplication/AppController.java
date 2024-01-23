@@ -105,10 +105,11 @@ public class AppController implements WebMvcConfigurer {
     }
 
     @RequestMapping(value = "/update_p", method = RequestMethod.POST)
-    public String update(@ModelAttribute("pracownik") Pracownik pracownik){
+    public String update_p(@ModelAttribute("pracownik") Pracownik pracownik){
         pracownicyDAO.update(pracownik);
         return "redirect:/main_admin";
     }
+
 
     @RequestMapping("/delete_p/{nr_pracownika}")
     public String delete_p(@PathVariable(name = "nr_pracownika") Integer nr_pracownika){
@@ -117,12 +118,26 @@ public class AppController implements WebMvcConfigurer {
     }
 
 
-    @RequestMapping(value={"/main_user"})
+    @RequestMapping("/main_user")
     public String showUserPage(Model model) {
         /* Import java.util.List */
         List<Klient> listKlient = klienciDao.list();
         model.addAttribute("listKlient", listKlient);
         return "user/main_user";
+    }
+
+    @RequestMapping(value = "/update_k", method = RequestMethod.POST)
+    public String update_k(@ModelAttribute("klient") Klient klient){
+        klienciDao.update(klient);
+        return "redirect:/main_user";
+    }
+
+    @RequestMapping("/edit_k/{nr_klienta}")
+    public ModelAndView showEditForm_k(@PathVariable(name = "nr_klienta") Integer nr_klienta) {
+        ModelAndView mav = new ModelAndView("edit_form_klienci");
+        Klient klient = klienciDao.get(nr_klienta);
+        mav.addObject("klient", klient);
+        return mav;
     }
 
 

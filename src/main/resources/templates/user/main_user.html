@@ -60,16 +60,25 @@
 
 <div class="container" align="center">
     <div class="row" style="align-content: center; justify-content: center">
-        <div class="col-md-10 mt-5">
+        <div class="col-md-10 mt-2">
             <form method="post" th:action="@{/index}">
                 <div class="form-group">
-                    <label style="font-size:30px" th:inline="text">Witaj <a
+                    <label style="font-size:30px;  margin-bottom: 0;" th:inline="text">Witaj <a
                             style="color: #826CF0; text-transform:capitalize"><b>[[${#httpServletRequest.remoteUser}]]</b></a>
                         w panelu użytkownika!
                     </label>
                     <div style="font-size:15px">Jeśli chcesz się wylogować, kliknij <button class="btn-link" style="color: #826CF0;" type="submit"><b>tutaj</b></button> lub na napis w prawym górnym rogu</div>
                 </div>
             </form>
+        </div>
+    </div>
+</div>
+
+    <div class="container-fluid mid">
+        <div class="row">
+            <div class="col-md-12 text-center" style="font-size: 1.5rem; color: #826CF0; padding: 15px;">
+                <div class ="text-div">TWOJE DANE</div>
+            </div>
         </div>
     </div>
 
@@ -84,7 +93,7 @@
             <th>Płeć</th>
             <th>Pesel</th>
             <th>Nr_telefonu</th>
-            <th>Adres</th>
+            <th>Edytuj</th>
         </tr>
         </thead>
         <!-- Table body -->
@@ -96,7 +105,9 @@
             <td th:text = "${klient.plec}">Płeć</td>
             <td th:text = "${klient.pesel}">Pesel</td>
             <td th:text = "${klient.nr_telefonu}">Nr_telefonu</td>
-            <td th:text = "${klient.nr_adresu}">Adres</td>
+            <td>
+                <a class="btn btn-primary" th:href="@{'/edit_k/' + ${klient.nr_klienta}}">Edytuj</a>
+            </td>
         </tr>
         </tbody>
     </table>

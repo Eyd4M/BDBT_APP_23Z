@@ -8,7 +8,7 @@ public class Klient {
     private String nazwisko;
     private String plec;
     private String pesel;
-    private int nr_telefonu;
+    private String nr_telefonu;
     private int nr_schroniska = 1;
     private int nr_adresu;
 
@@ -20,7 +20,7 @@ public class Klient {
         super();
     }
 
-    public Klient(Integer nr_klienta, String drugie_imie, String imie, String nazwisko, String plec, String pesel, Date data_zatrudnienia, int nr_schroniska, Date data_zwolnienia,int nr_telefonu,Integer nr_konta, int nr_adresu, String login) {
+    public Klient(Integer nr_klienta, String drugie_imie, String imie, String nazwisko, String plec, String pesel, int nr_schroniska,String nr_telefonu, int nr_adresu, String login) {
         this.nr_klienta = nr_klienta;
         this.drugie_imie = drugie_imie;
         this.imie = imie;
@@ -58,7 +58,7 @@ public class Klient {
         return pesel;
     }
 
-    public int getNr_telefonu() {
+    public String getNr_telefonu() {
         return nr_telefonu;
     }
 
@@ -100,7 +100,7 @@ public class Klient {
         this.pesel = pesel;
     }
 
-    public void setNr_telefonu(int nr_telefonu) {
+    public void setNr_telefonu(String nr_telefonu) {
         this.nr_telefonu = nr_telefonu;
     }
 

@@ -5,6 +5,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -32,6 +33,11 @@ public class KlienciDAO {
 
     /* Insert – wstawianie nowego wiersza do bazy */
     public void save(Klient klient) {
+        SimpleJdbcInsert insertActor = new SimpleJdbcInsert(jdbcTemplate);
+        insertActor.withTableName("klienci").usingColumns("imie","drugie_imie", "nazwisko", "plec", "pesel", "nr_schroniska", "nr_telefonu", "nr_adresu", "login");
+
+        BeanPropertySqlParameterSource param = new BeanPropertySqlParameterSource(klient);
+        insertActor.execute(param);
     }
     /* Read – odczytywanie danych z bazy */
     public Klient get(int nr_klienta) {
@@ -52,7 +58,7 @@ public class KlienciDAO {
     /* Update – aktualizacja danych */
     public void update(Klient klient) {
         String sql = "UPDATE KLIENCI SET imie=:imie, drugie_imie=:drugie_imie, nazwisko=:nazwisko, plec=:plec, pesel=:pesel, nr_telefonu=:nr_telefonu, " +
-                "nr_adresu=:nr_adresu WHERE nr_zwierzecia=:nr_zwierzecia ";
+                "nr_adresu=:nr_adresu WHERE nr_klienta=:nr_klienta";
         BeanPropertySqlParameterSource param = new BeanPropertySqlParameterSource(klient);
         NamedParameterJdbcTemplate template = new NamedParameterJdbcTemplate(jdbcTemplate);
 
