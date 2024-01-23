@@ -127,6 +127,9 @@ public class AppController implements WebMvcConfigurer {
         /* Import java.util.List */
         List<Klient> listKlient = klienciDao.list();
         model.addAttribute("listKlient", listKlient);
+
+        List<Zwierze> listZwierze = dao.list();
+        model.addAttribute("listZwierze", listZwierze);
         return "user/main_user";
     }
 

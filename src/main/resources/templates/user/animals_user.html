@@ -91,7 +91,7 @@
       <td th:text = "${zwierze.getAge}">Wiek</td>
       <td th:each = "klient: ${listKlient}" th:if="${klient.login == #httpServletRequest.remoteUser}">
         <form action="#" th:action="@{'/adopt/' + ${zwierze.nr_zwierzecia} + '_' + ${klient.nr_klienta}}" th:objects="${zwierze}" method="post" id="editFormId">
-          <button class="btn btn-primary">Adoptuj</button>
+          <button class="btn btn-primary" type="submit" onclick="return confirm('Czy na pewno chcesz adoptować tego zwierzaka?');">Adoptuj</button>
         </form>
       </td>
     </tr>

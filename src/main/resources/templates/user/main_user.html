@@ -113,6 +113,39 @@
     </table>
 </div>
 
+<div class="container-fluid mid">
+    <div class="row">
+        <div class="col-md-12 text-center" style="font-size: 1.5rem; color: #826CF0; padding: 15px;">
+            <div class ="text-div">ZAADOPTOWANE ZWIERZĘTA</div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <table border = "1" cellpadding = "10" class="table-center">
+        <!-- Table header -->
+        <thead>
+        <tr> <!-- Table row -->
+            <th>Imię</th>
+            <th>Opis</th>
+            <th>Rasa</th>
+            <th>Płeć</th>
+            <th>Wiek</th>
+        </tr>
+        </thead>
+        <!-- Table body -->
+        <tbody th:each = "klient : ${listKlient}" th:if="${klient.login == #httpServletRequest.remoteUser}">
+        <tr th:each = "zwierze : ${listZwierze}" th:if="${zwierze.nr_klienta_adoptujacy == klient.nr_klienta}">
+            <td th:text = "${zwierze.imie}">Imie</td>
+            <td th:text = "${zwierze.opis}">Opis</td>
+            <td th:text = "${zwierze.getRasa()}">Rasa</td>
+            <td th:text = "${zwierze.getPlecText()}">Plec</td>
+            <td th:text = "${zwierze.getAge}">Wiek</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
 
 
 
