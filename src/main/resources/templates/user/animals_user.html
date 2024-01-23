@@ -68,6 +68,7 @@
 </div>
 
 <div class="container-fluid">
+
   <table border = "1" cellpadding = "10" class="table-center">
     <!-- Table header -->
     <thead>
@@ -88,7 +89,11 @@
       <td th:text = "${zwierze.getRasa()}">Rasa</td>
       <td th:text = "${zwierze.getPlecText()}">Plec</td>
       <td th:text = "${zwierze.getAge}">Wiek</td>
-      <td><button class="btn btn-primary">Adoptuj</button></td>
+      <td th:each = "klient: ${listKlient}" th:if="${klient.login == #httpServletRequest.remoteUser}">
+        <form action="#" th:action="@{'/adopt/' + ${zwierze.nr_zwierzecia} + '_' + ${klient.nr_klienta}}" th:objects="${zwierze}" method="post" id="editFormId">
+          <button class="btn btn-primary">Adoptuj</button>
+        </form>
+      </td>
     </tr>
     </tbody>
   </table>

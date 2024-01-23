@@ -71,5 +71,12 @@ public class ZwierzetaDAO {
         jdbcTemplate.update(sql,nr_zwierzecia);
     }
 
+    public void adopt(Zwierze zwierze) {
+        String sql = "UPDATE ZWIERZETA SET nr_klienta_adoptujacy=:nr_klienta_adoptujacy WHERE nr_zwierzecia=:nr_zwierzecia";
+        BeanPropertySqlParameterSource param = new BeanPropertySqlParameterSource(zwierze);
+        NamedParameterJdbcTemplate template = new NamedParameterJdbcTemplate(jdbcTemplate);
+
+        template.update(sql, param);
+    }
 
 }

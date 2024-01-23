@@ -29,6 +29,10 @@ public class AppController implements WebMvcConfigurer {
         /* IMport java.util.List */
         List<Zwierze> listZwierze = dao.list();
         model.addAttribute("listZwierze", listZwierze);
+
+        List<Klient> listKlient = klienciDao.list();
+        model.addAttribute("listKlient", listKlient);
+
         return "user/animals_user";
     }
 
@@ -138,6 +142,16 @@ public class AppController implements WebMvcConfigurer {
         Klient klient = klienciDao.get(nr_klienta);
         mav.addObject("klient", klient);
         return mav;
+    }
+
+    @RequestMapping("/adopt/{nr_zwierzecia}_{nr_klienta}")
+    public String adopt(@PathVariable("nr_zwierzecia")
+                        Integer nr_zwierzecia, @PathVariable("nr_klienta") Integer nr_klienta){
+        Zwierze zwierze = dao.get(nr_zwierzecia);
+        zwierze.setNr_klienta_adoptujacy(nr_klienta);
+        dao.adopt(zwierze);
+
+        return "redirect:/animals_user";
     }
 
 
